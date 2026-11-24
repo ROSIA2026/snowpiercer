@@ -130,10 +130,14 @@ label.need{padding:2px 4px;margin-left:-4px;margin-right:-4px}
 #miracle.hidden{display:none}
 .devs{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
 .devh{font-size:10px;color:var(--muted);margin:8px 0 3px;letter-spacing:.08em;border-top:1px dashed rgba(232,176,48,.2);padding-top:5px}.devh em{font-style:normal;float:right;letter-spacing:0;color:#9aa6ae}
-.lmode{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-bottom:4px}.lcars{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
-.lmode button,.lcars button{padding:4px 0;border-radius:6px;border:1px solid rgba(232,176,48,.3);background:rgba(0,0,0,.28);color:#c8c0a8;font-size:10.5px;cursor:pointer}
+.lmode{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-bottom:5px}
+.lmode button,.cc button{padding:4px 0;border-radius:6px;border:1px solid rgba(232,176,48,.3);background:rgba(0,0,0,.28);color:#c8c0a8;font-size:10.5px;cursor:pointer}
 .lmode button.on{border-color:rgba(255,210,120,.8);background:rgba(255,200,90,.18);color:#fff2c8}
-.lcars button{font-size:9.5px;position:relative}.lcars button.on{background:rgba(255,214,120,.32);color:#fff4d0;border-color:rgba(255,214,120,.7);box-shadow:0 0 6px rgba(255,214,120,.35) inset}.lcars button.her::after{content:'👤';position:absolute;top:-9px;right:-2px;font-size:8px}
+.ccars{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.cc{position:relative;display:flex;flex-direction:column;align-items:stretch;gap:2px;text-align:center;padding:3px 1px;border-radius:6px;background:rgba(0,0,0,.18)}.cc b{font-size:9.5px;color:#e6ebef;font-weight:600}.cc small{font:600 10px Consolas,monospace}
+.cc.her::after{content:'👤';position:absolute;top:-8px;right:-1px;font-size:9px}
+.cc button{font-size:9px;padding:3px 0}.cc button[data-lc].on{background:rgba(255,214,120,.32);color:#fff4d0;border-color:rgba(255,214,120,.7);box-shadow:0 0 6px rgba(255,214,120,.35) inset}
+.cc button.hl0{color:#8aa8c8;border-color:rgba(120,160,210,.4)}.cc button.hl1{color:#f0c890;border-color:rgba(240,180,110,.5);background:rgba(240,150,70,.12)}.cc button.hl2{color:#fff0d8;border-color:rgba(255,120,60,.8);background:rgba(255,100,40,.28)}
 #devCare{font-size:10.5px;color:var(--muted);margin-top:5px}
 #wear{display:none}
 .thead{display:flex;justify-content:space-between;align-items:baseline;gap:6px;font-size:12.5px;margin-bottom:7px}.thead b{white-space:nowrap}.thead span{font-size:10.5px;color:var(--muted);white-space:nowrap}
@@ -153,6 +157,10 @@ label.need{padding:2px 4px;margin-left:-4px;margin-right:-4px}
 .devs button.on{border-color:rgba(255,170,90,.7);background:rgba(255,150,60,.14)}
 #fsTog,#sndTog{position:absolute;top:60px;right:322px;z-index:6;width:26px;height:30px;border-radius:8px 0 0 8px;border:1px solid var(--line);border-right:none;background:var(--panel);color:#d8e0e6;cursor:pointer;font-size:13px;padding:0}
 #sndTog{top:96px;font-size:12px}#sndTog.on{color:#f0c060}
+#ytWrap{width:100%;aspect-ratio:16/9;border-radius:8px;overflow:hidden;display:none;background:#000}#ytWrap.on{display:block}#ytWrap iframe{width:100%;height:100%;border:0;display:block}
+#ytHint{font-size:11px;color:var(--muted);margin-top:4px}
+#stock{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}#stock .sk{display:flex;flex-direction:column;align-items:center;padding:5px 2px 4px;border:1px solid var(--line);border-radius:7px;background:rgba(255,255,255,.04);line-height:1.2;min-width:0}#stock .sk .ic{font-size:15px}#stock .sk b{font-size:13px;font-weight:600;color:var(--text)}#stock .sk small{font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}#stock .sk.low{border-color:rgba(224,168,58,.55)}#stock .sk.low b{color:var(--warn)}#stock .sk.out{border-color:rgba(224,90,79,.6);background:rgba(224,90,79,.1)}#stock .sk.out b{color:var(--bad)}
+#facs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}#facs button{display:flex;flex-direction:column;align-items:center;gap:1px;padding:5px 3px;border:1px solid var(--line);border-radius:7px;background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font:inherit;min-width:0}#facs button:hover{background:rgba(255,255,255,.09)}#facs .ic{font-size:15px;line-height:1.15}#facs b{font-size:10.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}#facs small{font-size:9.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}#facs i{display:block;width:80%;height:3px;border-radius:2px;background:rgba(255,255,255,.1);overflow:hidden;margin-top:2px}#facs u{display:block;height:100%;width:0;background:var(--good);text-decoration:none}#facs button.off{opacity:.5}#facs button.off .ic{filter:grayscale(1)}#facs button.wait{border-color:rgba(224,168,58,.5)}#facs button.wait small{color:var(--warn)}#facs button.done{border-color:rgba(95,179,138,.75);background:rgba(95,179,138,.12)}#facs button.done small{color:var(--good)}#facs button.run small{color:var(--text)}
 #wseg{grid-template-columns:repeat(6,1fr)}
 #wseg button{font-size:11.5px}
 </style>
@@ -164,6 +172,7 @@ label.need{padding:2px 4px;margin-left:-4px;margin-right:-4px}
   <button id="panelTog" title="패널 접기 (P)">▶</button>
   <button id="fsTog" title="전체화면 (F)">⛶</button>
   <button id="sndTog" title="소리 켜기 (M)">🔇</button>
+  <div id="ytWrap" title="배경 음악"><div id="ytBgm"></div></div>
   <aside id="panel">
     <div class="top"><b>생존자</b><span id="clock">D+1 · 18:00</span></div>
     <div class="ctrl" id="ctrl">
@@ -339,9 +348,9 @@ function freshState() {
   return {
     day: 1, hour: 18,
     food: 70, water: 60, warmth: 60, health: 90,
-    fire: 50, barrel: 30, blanket: 0, hope: 55, wet: 20, drying: false, coal: 60, steam: 70, lampOn: false, hordeKey: -99, hordeAt: -1,
+    fire: 50, barrel: 60, blanket: 0, hope: 55, wet: 20, drying: false, coal: 85, steam: 70, lampOn: false, hordeKey: -99, hordeAt: -1,
     clockSync: true, outfit: 'coat', ctl: { reg: .74, brk: 0 }, power: 100, tankW: 100, boilerDmg: 0, nextCrisis: 1.5, mealKey: '', lastEpoch: 0,
-    stash: { food: 1, water: 1, fuel: 1, med: 0, blanket: 0, boards: 2, oil: 1, parts: 0, liquor: 2, fish: 0 },
+    stash: { food: 6, water: 5, fuel: 3, med: 2, blanket: 1, boards: 2, oil: 1, parts: 0, liquor: 2, fish: 3 },   // a well-stocked start for living; repair parts stay short so breakdowns still need you
     weatherMode: 'auto', weather: 'rain', weatherTimer: 4,
     speed: 1, sfx: 70, music: 25, battery: 4,
     focus: { running: false, left: 1500 },
@@ -367,6 +376,7 @@ try {
     S.focus.running = false;
     if (S.outfit === 'blazer') S.outfit = 'coat';
     if (S.projects.garden === 'none') { S.projects.garden = 'done'; S.garden = { G: 30, W: 60 }; }
+    if (!S.flags.stockUp1) { S.flags.stockUp1 = true; if (S.day <= 3) { const F = freshState(); for (const k of ['food', 'water', 'fuel', 'med', 'blanket', 'fish']) S.stash[k] = Math.max(S.stash[k] || 0, F.stash[k]); S.coal = Math.max(S.coal, F.coal); S.barrel = Math.max(S.barrel, F.barrel); } }   // early lives get the fuller start too
     if (S.clockSync && S.lastEpoch) {          // the real days that went by while the page was closed
       const d0 = new Date(S.lastEpoch); d0.setHours(0, 0, 0, 0); const d1 = new Date(); d1.setHours(0, 0, 0, 0);
       const dd = Math.round((d1 - d0) / 864e5); if (dd > 0) S.day += dd;
@@ -383,8 +393,8 @@ function log(m) { S.log.unshift({ t: `D+${S.day} ${timeStr()}`, m }); S.log.leng
 
 /* ---------- the whole train: one long walkable floor from the rear platform to the locomotive cab ---------- */
 // v: back wall → near cut edge.  Positions are given in world x and converted with U(x).
-const ROOF = { yb: 726, yf: 772, bl: 48, br: 8616, fl: 40, fr: 8622 };
-const WORLD_W = 10002;
+const ROOF = { yb: 726, yf: 772, bl: 48, br: 9690, fl: 40, fr: 9696 };
+const WORLD_W = 11076;
 const CARS = [
   { kind: 'living', x0: 132, x1: 1172 },
   { kind: 'galley', x0: 1206, x1: 2246 },
@@ -393,13 +403,14 @@ const CARS = [
   { kind: 'salon',  x0: 4428, x1: 5468 },
   { kind: 'lab',    x0: 5502, x1: 6542 },
   { kind: 'utility', x0: 6576, x1: 7616 },   // shower room + water heater + the equipment behind the driver's-stand devices
+  { kind: 'works',  x0: 7650, x1: 8690 },    // the production car: machines that make what the train runs short of
 ];
-const TENDER = { x0: 7650, x1: 8290 }, LOCO = { cab0: 8290, cab1: 8622, front: 9782, roofY: 300, hl: { x: 9816, y: 404 }, wh: { x: 8682, y: 340 }, stack: { x: 9662, y: 262 } };
-const COUPLERS = [1189, 2263, 3337, 4411, 5485, 6559, 7633];
-const TRUCKS = [302, 1002, 1376, 2076, 2450, 3150, 3524, 4224, 4598, 5298, 5672, 6372, 6746, 7446, 7790, 8150];
-const CAR_TRUCKS = TRUCKS.slice(0, 14);   // the carriages' bogies (the last two are the coal tender's)
+const TENDER = { x0: 8724, x1: 9364 }, LOCO = { cab0: 9364, cab1: 9696, front: 10856, roofY: 300, hl: { x: 10890, y: 404 }, wh: { x: 9756, y: 340 }, stack: { x: 10736, y: 262 } };
+const COUPLERS = [1189, 2263, 3337, 4411, 5485, 6559, 7633, 8707];
+const TRUCKS = [302, 1002, 1376, 2076, 2450, 3150, 3524, 4224, 4598, 5298, 5672, 6372, 6746, 7446, 7820, 8520, 8864, 9224];
+const CAR_TRUCKS = TRUCKS.slice(0, 16);   // the carriages' bogies (the last two are the coal tender's)
 const WHEEL_Y = ROOF.yf + 62, WHEEL_R = 20, RAIL_Y = WHEEL_Y + WHEEL_R;
-const FLOOR_LEN = 8575;
+const FLOOR_LEN = 9649;
 const U = x => (x - 44) / FLOOR_LEN;
 function roofPos(u, v) {
   if (v > 1) { const k = Math.min(1, v - 1); return { x: lerp(ROOF.fl, ROOF.fr, u), y: lerp(ROOF.yf, RAIL_Y + 10, k), s: 2.06 + .06 * k }; }   // stepped down onto the ground
@@ -410,20 +421,35 @@ function roofPos(u, v) {
 const OBJ = {
   tarp: { u: U(276), v: .2 }, fire: { u: U(640), v: .25 }, wood: { u: U(578), v: .32 }, seat: { u: U(742), v: .42 },
   barrel: { u: U(1985), v: .12 }, stash: { u: U(3800), v: .15 }, antenna: { u: U(1090), v: .05 }, drop: { u: U(80), v: .55 },
-  line: { u: U(600), v: .005 }, garden: { u: U(2480), v: .08 }, radio: { u: U(4690), v: .15 }, raft: { u: U(8397), v: .3 }, radioLand: { u: U(4900), v: .72 },
+  line: { u: U(600), v: .005 }, garden: { u: U(2480), v: .08 }, radio: { u: U(4690), v: .15 }, raft: { u: U(9471), v: .3 }, radioLand: { u: U(4900), v: .72 },
 };
 const STAND = {
   sleep: { u: U(300), v: .3 }, tarp: { u: U(390), v: .62 }, win: { u: U(450), v: .42 }, wood: { u: U(535), v: .62 }, feed: { u: U(672), v: .6 },
   seat: { u: U(742), v: .4205 }, barrel: { u: U(1948), v: .55 }, stash: { u: U(3760), v: .6 }, signal: { u: U(90), v: .7 },
   drop: { u: U(100), v: .5 }, sea: { u: U(560), v: .35 }, antenna: { u: U(1050), v: .35 }, diary: { u: U(345), v: .62 },
   tally: { u: U(170), v: .45 }, radioLand: { u: U(4870), v: .65 }, door: { u: U(191), v: .55 },
-  line: { u: U(830), v: .55 }, fish: { u: U(62), v: .92 }, garden: { u: U(2480), v: .55 }, radio: { u: U(4660), v: .55 }, bar: { u: U(5300), v: .5 }, piano: { u: U(5080), v: .4205 }, armchair: { u: U(4578), v: .4205 }, kitchen: { u: U(1376), v: .45 }, table: { u: U(1560), v: .4205 }, raft: { u: U(8362), v: .6 },
+  line: { u: U(830), v: .55 }, fish: { u: U(62), v: .92 }, garden: { u: U(2480), v: .55 }, radio: { u: U(4660), v: .55 }, bar: { u: U(5300), v: .5 }, piano: { u: U(5080), v: .4205 }, armchair: { u: U(4578), v: .4205 }, kitchen: { u: U(1376), v: .45 }, table: { u: U(1560), v: .4205 }, raft: { u: U(9436), v: .6 },
   rail: { u: U(88), v: .3 }, pick: { u: U(88), v: .38 }, wardrobe: { u: U(462), v: .36 },
-  coal: { u: U(7872), v: .55 }, firebox: { u: U(8467), v: .55 }, whistle: { u: U(8484), v: .5 }, gauge: { u: U(8557), v: .45 }, lamp: { u: U(8407), v: .5 },
+  coal: { u: U(8946), v: .55 }, firebox: { u: U(9541), v: .55 }, whistle: { u: U(9558), v: .5 }, gauge: { u: U(9631), v: .45 }, lamp: { u: U(9481), v: .5 },
 };
 
 const WARDROBE_BOX = { x: 430, w: 64, h: 100 };   // the living car's wardrobe, between the bed and the woodpile (world px)
+const REAR_VIEW = -230;   // how far past the tail the camera may show (world px): open track behind the last car, so the rear never sits cramped at the screen edge
 const HEATER = { dx: 320, hw: 42, top: 214, bot: 22 };   // the equipment car's water heater: centre (from the car's left end), half width, top & bottom above the floor
+// the train's own machines: each makes one kind of supply, slowly, on steam or power. need: { what: [must have, uses] } — G is the greenhouse
+const FAC = {
+  water: { car: 'works',  dx: 84,  ic: '💧', name: '눈 녹이는 정수기', short: '정수기',   out: 'water',   qty: 1, hrs: 2.5, use: 'steam', cap: 8,  tip: '지붕에 쌓인 눈과 빗물을 녹이고 걸러 생수를 만들어요. 눈·비가 오면 빨라져요' },
+  can:   { car: 'galley', dx: 192, ic: '🥫', name: '통조림 솥',       short: '통조림 솥', out: 'food',    qty: 2, hrs: 4,   use: 'steam', cap: 8,  need: { G: [15, 2] }, tip: '온실 채소를 삶아 통조림으로 봉해요' },
+  fruit: { car: 'farm',   dx: 300, ic: '🍎', name: '열매 덩굴',       short: '열매 덩굴', out: 'fish',    qty: 1, hrs: 3,   use: 'power', cap: 6,  need: { G: [10, 0] }, tip: '온실 등을 켜 두면 덩굴에 열매가 익어요' },
+  med:   { car: 'lab',    dx: 319, ic: '💊', name: '약 달이는 기구',   short: '약 기구',   out: 'med',     qty: 1, hrs: 8,   use: 'steam', cap: 4,  need: { G: [15, 1] }, tip: '온실에서 딴 약초로 약을 달여요' },
+  still: { car: 'works',  dx: 206, ic: '🍶', name: '술 내리는 솥',     short: '술 솥',     out: 'liquor',  qty: 1, hrs: 5,   use: 'steam', cap: 4,  need: { fish: [2, 2] }, def: false, tip: '열매 두 개를 삭혀 술을 내려요' },
+  press: { car: 'works',  dx: 326, ic: '🪵', name: '연료 벽돌 틀',     short: '연료 틀',   out: 'fuel',    qty: 1, hrs: 4,   use: 'power', cap: 6,  need: { G: [15, 1] }, tip: '온실에서 나온 마른 줄기를 눌러 난로 연료를 만들어요' },
+  kiln:  { car: 'works',  dx: 452, ic: '⚫', name: '숯가마',          short: '숯가마',    out: 'coal',    qty: 6, hrs: 4,   use: 'heat',  cap: 95, need: { fuel: [2, 1] }, def: false, tip: '연료 벽돌을 구워 기관차에 넣을 숯을 만들어요. 난로 몫으로 연료 하나는 남겨 둬요' },
+  loom:  { car: 'works',  dx: 580, ic: '🧣', name: '베틀',            short: '베틀',      out: 'blanket', qty: 1, hrs: 9,   use: 'power', cap: 3,  tip: '헌 천과 실을 엮어 담요를 짜요' },
+  saw:   { car: 'works',  dx: 706, ic: '🪚', name: '판자 톱',          short: '판자 톱',   out: 'boards',  qty: 1, hrs: 6,   use: 'power', cap: 5,  tip: '부서진 나무 상자를 켜서 판자를 만들어요' },
+  oil:   { car: 'works',  dx: 822, ic: '🧴', name: '기름틀',          short: '기름틀',    out: 'oil',     qty: 1, hrs: 7,   use: 'power', cap: 4,  need: { G: [15, 1] }, tip: '온실 씨앗을 짜서 윤활유를 받아요' },
+  lathe: { car: 'works',  dx: 946, ic: '🔩', name: '쇠 깎는 기계',     short: '부품 기계', out: 'parts',   qty: 1, hrs: 12,  use: 'power', cap: 3,  tip: '고철을 깎아 수리 부품을 만들어요. 아주 천천히요' },
+};
 
 /* ---------- runtime ---------- */
 const cur = { ...WEATHER[S.weather] };
@@ -693,6 +719,7 @@ function pickTask() {
   { const aw = afterWorkTask(); if (aw) return aw; }
   { const hw = heaterTask(); if (hw) return hw; }            // light the water heater in the evening; shower once it's hot
   { const eq = equipmentTask(); if (eq) return eq; }         // keep the equipment car in order
+  { const fc = facCollectTask(); if (fc) return fc; }        // empty a machine's tray: what the train made for her
   // ---- keep the engine alive: coal into the firebox ----
   if (S.steam < 35 && S.coal > 4 && (!isNight() || S.steam < 12)) return shovelTask();
   if (S.steam < 70 && S.coal > 4 && !isNight() && Math.random() < .35) return shovelTask();
@@ -767,7 +794,7 @@ function pickTask() {
     [1.4, () => gaugeTask()],
     [1.1, () => couplerTask()],
     [1, () => task('앞쪽 칸들을 둘러보는 중', [step({ u: U(rand(1300, 4300)), v: rand(.55, .8), anim: 'stand', dur: 2 }), step({ ...lookSpot(), anim: 'look', dur: 6, face: R() < .5 ? 1 : -1 })])],
-    [S.steam > 20 ? 1 : 0, () => task('기관실에서 앞을 내다보는 중', [step({ u: U(8602), v: .45, anim: 'look', dur: 9, face: 1, say: stage() < 2 ? pick(['어디까지 가는 걸까.', '끝없이 이어지네.']) : null })])],
+    [S.steam > 20 ? 1 : 0, () => task('기관실에서 앞을 내다보는 중', [step({ u: U(9676), v: .45, anim: 'look', dur: 9, face: 1, say: stage() < 2 ? pick(['어디까지 가는 걸까.', '끝없이 이어지네.']) : null })])],
     [storm ? 5 : 1.2, () => task('삐걱대는 바닥판을 고치는 중', [step({ ...STAND.tarp, anim: 'hammer', dur: 6.5, face: -1, hold: 'hammer', done() { woman.hold = null; } })])],
     [1.5, () => task('빗물통을 들여다보는 중', [step({ ...STAND.barrel, anim: 'inspect', dur: 5, face: 1 })])],
     [1.2, () => task('남은 물자를 세어보는 중', [step({ ...STAND.stash, anim: 'sort', dur: 5.5, face: 1 })])],
@@ -1241,8 +1268,13 @@ function carShell(g, car, r) {
     g.strokeStyle = '#a08a5a'; g.lineWidth = 2; for (const k of [600, 680, 760]) { g.beginPath(); g.moveTo(x0 + k, CAR.roof); g.lineTo(x0 + k + 6, CAR.roof - 34); g.stroke(); }
     g.fillStyle = '#2b3331'; g.fillRect(x0 + 300, CAR.roof - 10, 60, 10); g.fillStyle = '#c9a03a'; g.fillRect(x0 + 326, CAR.roof - 13, 8, 3);
   }
+  if (kind === 'works') {      // a hopper catching snow and rain for the water machine; the kiln's chimney
+    const hx = x0 + FAC.water.dx; g.fillStyle = '#4a5a62'; g.beginPath(); g.moveTo(hx - 34, CAR.roof - 26); g.lineTo(hx + 34, CAR.roof - 26); g.lineTo(hx + 12, CAR.roof); g.lineTo(hx - 12, CAR.roof); g.closePath(); g.fill();
+    g.fillStyle = '#6a7a82'; g.fillRect(hx - 36, CAR.roof - 30, 72, 5); g.fillStyle = 'rgba(0,0,0,.25)'; g.fillRect(hx - 30, CAR.roof - 22, 60, 2);
+    const kx = x0 + FAC.kiln.dx + 24; g.fillStyle = '#3a3630'; g.fillRect(kx - 7, CAR.roof - 46, 14, 46); g.fillStyle = '#2a2622'; g.fillRect(kx - 10, CAR.roof - 50, 20, 6);
+  }
   /* ---- back wall ---- */
-  const wallTop = { living: ['#d6cdae', '#bfb595'], galley: ['#d8cfaa', '#c2b48e'], farm: ['#c8d6b4', '#acbd96'], store: ['#8e958a', '#767d72'], salon: ['#7a4a3a', '#5e3426'], lab: ['#a7b6ae', '#84948c'], utility: ['#98a6a4', '#7c8a88'] }[kind] || ['#a7b6ae', '#84948c'];
+  const wallTop = { living: ['#d6cdae', '#bfb595'], galley: ['#d8cfaa', '#c2b48e'], farm: ['#c8d6b4', '#acbd96'], store: ['#8e958a', '#767d72'], salon: ['#7a4a3a', '#5e3426'], lab: ['#a7b6ae', '#84948c'], utility: ['#98a6a4', '#7c8a88'], works: ['#8f9690', '#757c76'] }[kind] || ['#a7b6ae', '#84948c'];
   const wg = g.createLinearGradient(0, CAR.ceil, 0, CAR.floorB); wg.addColorStop(0, wallTop[0]); wg.addColorStop(1, wallTop[1]);
   g.fillStyle = wg; g.fillRect(x0, CAR.ceil, W0, CAR.floorB - CAR.ceil);
   if (kind === 'living') {            // faded floral wallpaper
@@ -1342,13 +1374,13 @@ function carShell(g, car, r) {
   { const ex = x0 + 18, ey = CAR.floorB - 64; g.fillStyle = '#b8322a'; rrect(g, ex, ey, 14, 40, 5); g.fill(); g.fillStyle = '#2a2a2a'; g.fillRect(ex + 3, ey - 6, 8, 7); g.fillStyle = 'rgba(255,255,255,.3)'; g.fillRect(ex + 3, ey + 4, 2, 30); g.fillStyle = '#e8e2c8'; g.fillRect(ex + 2, ey + 14, 10, 8); }
   { const bx = x1 - 30; g.fillStyle = '#b8322a'; g.fillRect(bx, CAR.ceil + 60, 18, 14); g.fillStyle = '#e8e2c8'; g.font = 'bold 6px Arial'; g.fillText('비상', bx + 2, CAR.ceil + 70); g.strokeStyle = '#8a8e92'; g.lineWidth = 1; g.beginPath(); g.moveTo(bx + 9, CAR.ceil + 74); g.lineTo(bx + 9, CAR.ceil + 98); g.stroke(); g.fillStyle = '#b8322a'; g.fillRect(bx + 5, CAR.ceil + 98, 8, 5); }
   /* ---- vines & sill plants ---- */
-  const nv = kind === 'farm' ? 50 : kind === 'store' ? 4 : kind === 'galley' ? 12 : kind === 'salon' || kind === 'utility' ? 0 : 20;
+  const nv = kind === 'farm' ? 50 : kind === 'store' ? 4 : kind === 'galley' ? 12 : kind === 'salon' || kind === 'utility' || kind === 'works' ? 0 : 20;
   for (let i = 0; i < nv; i++) {
     const vx = lerp(x0 + 20, x1 - 20, r()), len = lerp(30, kind === 'farm' ? 200 : 130, r());
     for (let y = 0; y < len; y += 7) { const k = 1 - y / len; leaf(g, vx + Math.sin(y * .12 + i) * 6, CAR.ceil + 38 + y, 4.6 * k + 2, 3.4 * k + 1.6, r() * 3, r); }
     if (kind === 'farm' && r() < .3) { g.fillStyle = '#f2e6a0'; g.beginPath(); g.arc(vx + 4, CAR.ceil + 38 + len * .7, 2.4, 0, 7); g.fill(); }
   }
-  if (kind !== 'store' && kind !== 'salon' && kind !== 'lab' && kind !== 'utility') for (const w of wins) for (let k = 0; k < 3; k++) {
+  if (kind !== 'store' && kind !== 'salon' && kind !== 'lab' && kind !== 'utility' && kind !== 'works') for (const w of wins) for (let k = 0; k < 3; k++) {
     const px = w.x + 18 + k * 46, py = CAR.winBot + 6;
     g.fillStyle = pick(['#a8553a', '#b8653a', '#8a7a6a']); g.beginPath(); g.moveTo(px - 8, py); g.lineTo(px + 8, py); g.lineTo(px + 6, py - 12); g.lineTo(px - 6, py - 12); g.closePath(); g.fill();
     g.fillStyle = 'rgba(0,0,0,.2)'; g.fillRect(px - 8, py - 12, 16, 2);
@@ -1362,6 +1394,7 @@ function carShell(g, car, r) {
   else if (kind === 'salon') salonDecor(g, car, gaps, r);
   else if (kind === 'lab') labDecor(g, car, gaps, r);
   else if (kind === 'utility') utilityDecor(g, car, gaps, r);
+  else if (kind === 'works') worksDecor(g, car, gaps, r);
   else storeDecor(g, car, gaps, r);
   /* ---- the cut edge of the body, livery, under-frame, bogies ---- */
   const cs = g.createLinearGradient(0, CAR.floorF, 0, CAR.sill); cs.addColorStop(0, kind === 'salon' ? '#6a2a2c' : '#506259'); cs.addColorStop(1, kind === 'salon' ? '#3e1618' : '#2e3a36');
@@ -1370,7 +1403,7 @@ function carShell(g, car, r) {
   g.fillStyle = 'rgba(150,80,40,.38)'; for (let i = 0; i < 30; i++) g.fillRect(lerp(x0, x1, r()), CAR.floorF + 5, lerp(2, 5, r()), lerp(5, 16, r()));
   rivets(g, x0, x1, CAR.floorF + 9, 22);
   g.fillStyle = 'rgba(236,230,214,.5)'; g.font = 'bold 13px Arial';
-  g.fillText({ living: 'NO.07 · LIVING', galley: 'NO.06 · GALLEY & WORKSHOP', farm: 'NO.05 · GREENHOUSE', store: 'NO.04 · STORES', salon: 'NO.03 · FIRST CLASS', lab: 'NO.02 · LABORATORY', utility: 'NO.01 · BATH & EQUIPMENT' }[kind], x0 + 40, CAR.sill - 5);
+  g.fillText({ living: 'NO.08 · LIVING', galley: 'NO.07 · GALLEY & WORKSHOP', farm: 'NO.06 · GREENHOUSE', store: 'NO.05 · STORES', salon: 'NO.04 · FIRST CLASS', lab: 'NO.03 · LABORATORY', utility: 'NO.02 · BATH & EQUIPMENT', works: 'NO.01 · WORKS' }[kind], x0 + 40, CAR.sill - 5);
   g.fillStyle = '#b8902e'; g.beginPath(); g.ellipse(x1 - 90, CAR.sill - 10, 22, 8, 0, 0, 7); g.fill(); g.fillStyle = '#6a4a18'; g.font = 'bold 6px Arial'; g.fillText('1924 · 기차제작소', x1 - 110, CAR.sill - 8);
   // destination board, end marker lamps, a water-filler cap and the car's weight stencil
   g.fillStyle = '#e8e2c8'; rrect(g, x0 + W0 / 2 - 60, CAR.floorF + 14, 120, 18, 3); g.fill(); g.strokeStyle = '#2a5c8c'; g.lineWidth = 1.5; g.stroke();
@@ -1505,9 +1538,7 @@ function galleyDecor(g, car, gaps, r) {
   { const cx = x0 + 860; g.fillStyle = '#5c6a6a'; g.fillRect(cx, fb - 170, 140, 170); g.fillStyle = '#4a5656'; g.fillRect(cx, fb - 172, 140, 5);
     for (let row = 0; row < 7; row++) for (let col = 0; col < 3; col++) { const dx = cx + 6 + col * 45, dy = fb - 164 + row * 23; g.fillStyle = '#6e7c7c'; g.fillRect(dx, dy, 41, 19); g.fillStyle = '#efe6c8'; g.fillRect(dx + 13, dy + 4, 15, 6); g.fillStyle = '#9aa0a4'; g.fillRect(dx + 15, dy + 13, 11, 3); }
     g.fillStyle = '#8a8e92'; for (let k = 0; k < 4; k++) { g.fillRect(cx + 10 + k * 30, fb - 196, 18, 24); g.fillStyle = k % 2 ? '#7a8a6a' : '#8a8e92'; } }
-  // a small table and stool where she eats
-  { const tx = x0 + 354; g.fillStyle = '#6b4a2e'; g.fillRect(tx - 30, fb - 46, 60, 6); g.fillRect(tx - 26, fb - 40, 5, 40); g.fillRect(tx + 21, fb - 40, 5, 40); g.fillStyle = '#e8e2d0'; g.beginPath(); g.ellipse(tx - 10, fb - 47, 7, 2, 0, 0, Math.PI * 2); g.fill(); g.fillStyle = '#8a8e92'; g.fillRect(tx + 6, fb - 52, 2, 6);
-    g.fillStyle = '#5a3c24'; g.fillRect(tx - 12, fb - 36, 24, 5); g.fillRect(tx - 10, fb - 31, 3, 31); g.fillRect(tx + 7, fb - 31, 3, 31); }
+  // (the table and chair where she eats are live props now: drawGalleyTable)
   // first-aid box on the end wall
   { const [s0] = gaps[5]; g.fillStyle = '#f0ece0'; g.fillRect(s0 + 10, CAR.winTop + 20, 30, 26); g.fillStyle = '#c8402e'; g.fillRect(s0 + 22, CAR.winTop + 24, 6, 18); g.fillRect(s0 + 16, CAR.winTop + 30, 18, 6); }
 }
@@ -1705,18 +1736,18 @@ function buildLoco(g, r) {
   const fbx1 = cab1 + 300, sbx0 = front - 260;
   /* ---- below the boiler: shadow, ash pan, frames ---- */
   g.fillStyle = '#0c0d0e'; g.fillRect(cab1 - 10, bb, front - cab1 - 20, 818 - bb);   // everything behind the running gear is engine: frames, ash pan, pipework — no daylight under her
-  g.fillStyle = '#16181a'; g.fillRect(cab1 + 20, 760, 300, 52); g.fillStyle = '#202326'; for (const tx of [8722, 8832]) { g.fillRect(tx - 30, 790, 60, 22); }   // trailing-truck cradle
+  g.fillStyle = '#16181a'; g.fillRect(cab1 + 20, 760, 300, 52); g.fillStyle = '#202326'; for (const tx of [9796, 9906]) { g.fillRect(tx - 30, 790, 60, 22); }   // trailing-truck cradle
   g.strokeStyle = '#2a2d30'; g.lineWidth = 3; g.beginPath(); g.moveTo(cab1 + 20, 786); g.lineTo(cab1 + 300, 786); g.moveTo(front - 280, 790); g.lineTo(front - 20, 790); g.stroke();
   g.fillStyle = '#17191b'; g.beginPath(); g.moveTo(cab1 + 20, bb); g.lineTo(fbx1 - 20, bb); g.lineTo(fbx1 - 50, bb + 78); g.lineTo(cab1 + 60, bb + 78); g.closePath(); g.fill();      // ash pan hopper
   g.fillStyle = '#26292c'; g.fillRect(cab1 + 60, bb + 74, fbx1 - cab1 - 110, 8);
   const frm = g.createLinearGradient(0, 690, 0, 806); frm.addColorStop(0, '#24272a'); frm.addColorStop(1, '#141618');
   g.fillStyle = frm; g.fillRect(fbx1 - 20, 690, sbx0 - fbx1 + 120, 116);
-  g.fillStyle = '#07080a'; for (const hx of [9057, 9207, 9357]) { g.beginPath(); g.ellipse(hx, 726, 18, 26, 0, 0, 7); g.fill(); }
-  for (const dx of [8982, 9132, 9282, 9432]) { g.fillStyle = '#34383c'; g.fillRect(dx - 20, 752, 40, 50); g.fillStyle = '#8a8e92'; g.fillRect(dx - 20, 752, 40, 3); }
+  g.fillStyle = '#07080a'; for (const hx of [10131, 10281, 10431]) { g.beginPath(); g.ellipse(hx, 726, 18, 26, 0, 0, 7); g.fill(); }
+  for (const dx of [10056, 10206, 10356, 10506]) { g.fillStyle = '#34383c'; g.fillRect(dx - 20, 752, 40, 50); g.fillStyle = '#8a8e92'; g.fillRect(dx - 20, 752, 40, 3); }
   rivets(g, fbx1, sbx0 + 90, 698, 16, 1.2); rivets(g, fbx1, sbx0 + 90, 800, 16, 1.2);
   // spring rigging: a leaf spring over each driving axle, linked by equalizing beams
-  for (const dx of [8982, 9132, 9282, 9432]) { g.fillStyle = '#3d4146'; for (let k = 0; k < 5; k++) g.fillRect(dx - 26 + k * 2.4, 708 + k * 2, 52 - k * 4.8, 2); g.fillStyle = '#26292c'; g.fillRect(dx - 3, 716, 6, 36); g.fillRect(dx - 28, 704, 4, 8); g.fillRect(dx + 24, 704, 4, 8); }
-  g.strokeStyle = '#26292c'; g.lineWidth = 4; for (const dx of [9057, 9207, 9357]) { g.beginPath(); g.moveTo(dx - 47, 706); g.lineTo(dx + 47, 706); g.stroke(); g.fillStyle = '#4a4e52'; g.beginPath(); g.arc(dx, 706, 3, 0, 7); g.fill(); }
+  for (const dx of [10056, 10206, 10356, 10506]) { g.fillStyle = '#3d4146'; for (let k = 0; k < 5; k++) g.fillRect(dx - 26 + k * 2.4, 708 + k * 2, 52 - k * 4.8, 2); g.fillStyle = '#26292c'; g.fillRect(dx - 3, 716, 6, 36); g.fillRect(dx - 28, 704, 4, 8); g.fillRect(dx + 24, 704, 4, 8); }
+  g.strokeStyle = '#26292c'; g.lineWidth = 4; for (const dx of [10131, 10281, 10431]) { g.beginPath(); g.moveTo(dx - 47, 706); g.lineTo(dx + 47, 706); g.stroke(); g.fillStyle = '#4a4e52'; g.beginPath(); g.arc(dx, 706, 3, 0, 7); g.fill(); }
   /* ---- boiler: firebox, tapered barrel ---- */
   const bg = g.createLinearGradient(0, by - 14, 0, bb); bg.addColorStop(0, '#15181a'); bg.addColorStop(.14, '#4a5154'); bg.addColorStop(.3, '#2a2f32'); bg.addColorStop(.75, '#15181a'); bg.addColorStop(1, '#08090a');
   g.fillStyle = bg; g.beginPath(); g.moveTo(cab1, by - 14); g.lineTo(fbx1 - 30, by - 14); g.quadraticCurveTo(fbx1 - 10, by - 14, fbx1 + 10, by - 8); g.lineTo(fbx1 + 140, by - 4); g.lineTo(sbx0, by); g.lineTo(sbx0, bb); g.lineTo(cab1, bb); g.closePath(); g.fill();
@@ -1762,7 +1793,7 @@ function buildLoco(g, r) {
   }
   g.fillStyle = '#4a4e52'; g.fillRect(fbx1 + 230, by - 20, 26, 18); g.fillStyle = '#8a8e92'; g.fillRect(fbx1 + 226, by - 24, 34, 5);
   for (const vx of [cab1 + 110, cab1 + 134]) { g.fillStyle = '#c9a03a'; g.fillRect(vx - 6, by - 50, 12, 36); g.fillStyle = '#e8c860'; g.fillRect(vx - 8, by - 54, 16, 6); }   // safety valves
-  g.strokeStyle = '#3a3e41'; g.lineWidth = 3; for (const tx of [9132 - 70, 9282 - 70, 9432 - 70]) { g.beginPath(); g.moveTo(sbx0 - 200, by); g.quadraticCurveTo(sbx0 - 200, bb + 20, tx, 760); g.stroke(); }   // sand pipes
+  g.strokeStyle = '#3a3e41'; g.lineWidth = 3; for (const tx of [10206 - 70, 10356 - 70, 10506 - 70]) { g.beginPath(); g.moveTo(sbx0 - 200, by); g.quadraticCurveTo(sbx0 - 200, bb + 20, tx, 760); g.stroke(); }   // sand pipes
   // boiler handrails with stanchions
   g.strokeStyle = '#c0c4c6'; g.lineWidth = 2.6; g.beginPath(); g.moveTo(cab1 + 10, by + 62); g.lineTo(front - 60, by + 64); g.stroke();
   for (let x = cab1 + 40; x < front - 60; x += 80) { g.fillStyle = '#8a8e92'; g.fillRect(x - 1.5, by + 62, 3, 10); }
@@ -1782,8 +1813,8 @@ function buildLoco(g, r) {
   rivets(g, c0 + 8, c1 - 10, 750, 12, 1.2); rivets(g, c0 + 8, c1 - 10, 794, 12, 1.2);
   g.fillStyle = '#25282b'; g.fillRect(c0 + 4, 712, c1 - c0 - 8, 32); g.fillStyle = '#4a4e52'; g.fillRect(c0, 708, c1 - c0, 5);
   g.fillStyle = '#c9a03a'; g.fillRect(c0 + 30, 696, 16, 12); g.fillRect(c0 + 27, 694, 22, 3);
-  g.strokeStyle = '#a0a6aa'; g.lineWidth = 3; g.beginPath(); g.moveTo(9458, 766); g.lineTo(c0, 766); g.moveTo(9458, 778); g.lineTo(c0, 778); g.stroke();
-  g.fillStyle = '#26292c'; g.fillRect(9352, 690, 20, 30); g.fillStyle = '#4a4e52'; g.fillRect(9346, 686, 32, 6);
+  g.strokeStyle = '#a0a6aa'; g.lineWidth = 3; g.beginPath(); g.moveTo(10532, 766); g.lineTo(c0, 766); g.moveTo(10532, 778); g.lineTo(c0, 778); g.stroke();
+  g.fillStyle = '#26292c'; g.fillRect(10426, 690, 20, 30); g.fillStyle = '#4a4e52'; g.fillRect(10420, 686, 32, 6);
   /* ---- pilot deck, buffer beam, coupler, slatted pilot, leading-truck frame ---- */
   g.fillStyle = '#16181a'; g.fillRect(front - 30, 740, 70, 66); g.fillStyle = '#8a8e92'; g.fillRect(front - 30, 740, 70, 2);
   g.fillStyle = '#c8402e'; g.fillRect(front - 30, 760, 70, 3);
@@ -1791,10 +1822,10 @@ function buildLoco(g, r) {
   g.fillStyle = '#1e2022'; g.beginPath(); g.moveTo(front - 20, 806); g.lineTo(front + 36, 806); g.lineTo(front + 120, RAIL_Y - 4); g.lineTo(front - 50, RAIL_Y - 4); g.closePath(); g.fill();
   g.strokeStyle = '#3a3e41'; g.lineWidth = 4; for (let k = 0; k < 9; k++) { const tt = k / 8; g.beginPath(); g.moveTo(lerp(front - 16, front + 34, tt), 808); g.lineTo(lerp(front - 46, front + 116, tt), RAIL_Y - 5); g.stroke(); }
   g.fillStyle = '#8a8e92'; g.fillRect(front - 50, RAIL_Y - 8, 170, 4);
-  g.fillStyle = '#26292c'; g.fillRect(9562, 806, 170, 12);
+  g.fillStyle = '#26292c'; g.fillRect(10636, 806, 170, 12);
   for (const [sx2, sy2] of [[front - 80, bb + 26], [front + 10, 720]]) { g.fillStyle = '#26292c'; g.fillRect(sx2, sy2, 4, 40); g.fillRect(sx2 + 18, sy2, 4, 40); g.fillStyle = '#8a8e92'; g.fillRect(sx2, sy2 + 18, 22, 3); g.fillRect(sx2, sy2 + 36, 22, 3); }   // steps
   // trailing-truck frame under the cab
-  g.fillStyle = '#1e2022'; g.fillRect(8672, 806, 220, 14); g.fillStyle = '#34383c'; for (const tx of [8722, 8832]) g.fillRect(tx - 14, 812, 28, 22);
+  g.fillStyle = '#1e2022'; g.fillRect(9746, 806, 220, 14); g.fillStyle = '#34383c'; for (const tx of [9796, 9906]) g.fillRect(tx - 14, 812, 28, 22);
 
   /* ---- the cab: tall, with big arched windows ---- */
   g.fillStyle = '#0e1011'; g.beginPath(); g.moveTo(cab0 - 20, roofY + 8); g.quadraticCurveTo(cab0 - 14, roofY - 16, cab0 + 34, roofY - 18); g.lineTo(cab1 - 24, roofY - 18); g.quadraticCurveTo(cab1 + 16, roofY - 16, cab1 + 24, roofY + 8); g.closePath(); g.fill();
@@ -2184,6 +2215,31 @@ function drawSeat(x, y, s) { // a wicker papasan chair with a cushion, and the f
   ctx.fillStyle = '#9a7444'; ctx.beginPath(); ctx.moveTo(22, -10); ctx.lineTo(38, -10); ctx.lineTo(36, 0); ctx.lineTo(24, 0); ctx.closePath(); ctx.fill();
   ctx.strokeStyle = 'rgba(60,40,20,.5)'; ctx.lineWidth = .8; for (const yy of [-7, -3]) { ctx.beginPath(); ctx.moveTo(23, yy); ctx.lineTo(37, yy); ctx.stroke(); }
   for (let i = 0; i < Math.min(S.stash.fish, 5); i++) { ctx.fillStyle = i % 2 ? '#c8402e' : '#d8573a'; ctx.beginPath(); ctx.arc(25 + (i % 3) * 4.5, -11.5 - Math.floor(i / 3) * 3.5, 2.6, 0, Math.PI * 2); ctx.fill(); }
+  ctx.restore();
+}
+
+// the kitchen chair and small table where she eats: light wood and a cushion, so the chair reads against the dark wall
+function drawGalleyChair(x, y, s) {
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  shadow(ctx, -2, 2, 15);
+  const W = '#c49358', D = '#94683a', L = '#e2b878';
+  ctx.fillStyle = D; ctx.fillRect(-14, -46, 3.4, 46); ctx.fillRect(7, -15, 3, 15);   // back post (runs up into the backrest) and front leg
+  ctx.fillRect(-11, -5, 19, 2);                                                       // rung
+  ctx.fillStyle = W; ctx.fillRect(-15, -46, 5.4, 3); ctx.fillRect(-14.6, -36, 4.4, 2.4); // backrest rail and slat
+  ctx.fillStyle = W; ctx.fillRect(-15, -18, 26, 3.4);                                 // seat
+  ctx.fillStyle = L; ctx.fillRect(-15, -18, 26, 1.1);
+  ctx.fillStyle = '#b5523a'; rrect(ctx, -13, -21.5, 22, 4, 2); ctx.fill();            // cushion
+  ctx.fillStyle = 'rgba(255,255,255,.18)'; ctx.fillRect(-11, -21, 18, 1);
+  ctx.restore();
+}
+function drawGalleyTable(x, y, s) {
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  shadow(ctx, 39, 2, 22);
+  ctx.fillStyle = '#8a5e34'; ctx.fillRect(23, -29, 3.4, 29); ctx.fillRect(53, -29, 3.4, 29);   // legs
+  ctx.fillRect(25, -9, 30, 2);
+  ctx.fillStyle = '#b8864e'; ctx.fillRect(19, -32, 42, 4); ctx.fillStyle = '#d4a46a'; ctx.fillRect(19, -32, 42, 1.1);   // top
+  ctx.fillStyle = '#efe8d6'; ctx.beginPath(); ctx.ellipse(33, -33, 8, 1.8, 0, 0, Math.PI * 2); ctx.fill();               // plate
+  ctx.fillStyle = '#c8b89a'; ctx.fillRect(48, -38, 6, 6); ctx.strokeStyle = '#c8b89a'; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(55, -35, 2, -1.4, 1.4); ctx.stroke();   // mug
   ctx.restore();
 }
 
@@ -4687,7 +4743,8 @@ function updateCam(dt) {
   camR.z = lerp(camR.z, tz, e);
   let tx = over ? WORLD_W / 2 : (woman.anim === 'sleep' ? roofPos(OBJ.tarp.u, OBJ.tarp.v).x : herWorld()) + woman.facing * 60;
   const half = SCENE_R / (2 * camR.z);
-  tx = WORLD_W + 40 < half * 2 ? WORLD_W / 2 : clamp(tx, half - 40, WORLD_W - half + (woman.v > 1 || crisis ? 560 : 30));
+  const minX = REAR_VIEW + (SCENE_R / 2 - (VIEW.l || 0)) / camR.z;   // far enough back that some open track shows past the tail, even when the window crops the scene's left side
+  tx = WORLD_W + 40 < half * 2 ? WORLD_W / 2 : clamp(tx, minX, WORLD_W - half + (woman.v > 1 || crisis ? 560 : 30));
   camR.x = lerp(camR.x, tx, 1 - Math.pow(.08, dt));
   PANX = camR.x * camR.z;
 }
@@ -4797,7 +4854,7 @@ function drawWheels() {
 }
 
 /* ----- the locomotive's moving parts ----- */
-const DRIVERS = [8982, 9132, 9282, 9432], DRV_R = 66, CRANK = 28, MAIN_ROD = 250, XH_Y = 772, TRAILERS = [8722, 8832], LEADERS = [9602, 9702];
+const DRIVERS = [10056, 10206, 10356, 10506], DRV_R = 66, CRANK = 28, MAIN_ROD = 250, XH_Y = 772, TRAILERS = [9796, 9906], LEADERS = [10676, 10776];
 function driverWheel(x, y, ang) {
   ctx.fillStyle = '#0c0d0e'; ctx.beginPath(); ctx.arc(x, y, DRV_R, 0, Math.PI * 2); ctx.fill();
   ctx.strokeStyle = '#ece8dc'; ctx.lineWidth = 6; ctx.beginPath(); ctx.arc(x, y, DRV_R - 4, 0, Math.PI * 2); ctx.stroke();        // white-walled tyre
@@ -4821,7 +4878,7 @@ function drawLoco(night) {
   // glowing ash pan under the firebox
   if (S.steam > 0) { const ax = cab1 + 150, ay = BOIL.bot + 70, g0 = ctx.createRadialGradient(ax, ay, 2, ax, ay, 110); g0.addColorStop(0, `rgba(255,130,40,${.25 + heat * .4 + Math.sin(t * 9) * .05})`); g0.addColorStop(1, 'rgba(255,90,20,0)'); ctx.fillStyle = g0; ctx.fillRect(ax - 120, ay - 60, 240, 110); }
   ctx.save(); ctx.translate(0, -TRAIN.bob);            // the running gear rides on the rails; only the body sways on its springs
-  for (const x of [...TRAILERS, ...LEADERS, ...DRIVERS]) { ctx.fillStyle = 'rgba(0,0,0,.45)'; ctx.beginPath(); ctx.ellipse(x, RAIL_Y + 3, x > 8922 && x < 9522 ? 58 : 30, 5, 0, 0, Math.PI * 2); ctx.fill(); }
+  for (const x of [...TRAILERS, ...LEADERS, ...DRIVERS]) { ctx.fillStyle = 'rgba(0,0,0,.45)'; ctx.beginPath(); ctx.ellipse(x, RAIL_Y + 3, x > 9996 && x < 10596 ? 58 : 30, 5, 0, 0, Math.PI * 2); ctx.fill(); }
   for (const x of TRAILERS) smallWheel(x, 34, (TRAIN.wrot || 0) * SPD.track / 34);
   for (const x of LEADERS) smallWheel(x, 30, (TRAIN.wrot || 0) * SPD.track / 30);
   for (const x of DRIVERS) driverWheel(x, cy, ang);
@@ -4849,7 +4906,7 @@ function drawLoco(night) {
   for (const p of P) { ctx.fillStyle = '#c0c4c6'; ctx.beginPath(); ctx.arc(p.x, p.y, 6.5, 0, Math.PI * 2); ctx.fill(); ctx.fillStyle = '#4a4e52'; ctx.beginPath(); ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2); ctx.fill(); }
   // valve gear: return crank → eccentric rod → swinging link → radius rod; combination lever from the crosshead
   const rc = { x: main.x + Math.cos(ang + Math.PI / 2) * 13, y: main.y + Math.sin(ang + Math.PI / 2) * 13 };
-  const lk = { x: 9362, y: 714 }, la = Math.sin(ang + Math.PI / 2) * .32, lb = { x: lk.x + Math.sin(la) * 24, y: lk.y + Math.cos(la) * 24 };
+  const lk = { x: 10436, y: 714 }, la = Math.sin(ang + Math.PI / 2) * .32, lb = { x: lk.x + Math.sin(la) * 24, y: lk.y + Math.cos(la) * 24 };
   ctx.strokeStyle = '#8a8e92'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(rc.x, rc.y); ctx.lineTo(lb.x, lb.y); ctx.stroke();
   ctx.strokeStyle = '#6a6e72'; ctx.lineWidth = 8; ctx.beginPath(); ctx.moveTo(lk.x - Math.sin(la) * 22, lk.y - Math.cos(la) * 22); ctx.lineTo(lb.x, lb.y); ctx.stroke();
   const vr = { x: front - 250, y: 728 + Math.sin(ang) * 4 }, ct = { x: xh.x, y: 728 };
@@ -5143,14 +5200,14 @@ function oilTask() {
   const bx = pick(CAR_TRUCKS) + pick([-52, 52]);
   return task('대차 축에 기름을 치는 중', [step({ u: U(bx), v: .9, anim: 'crouch', dur: 4, face: 1, hold: 'oilcan', work: true, say: stage() < 2 ? pick(['삐걱대지 말고 잘 굴러가렴.', '기름 한 방울이면 충분해.']) : null, done() { woman.hold = null; } })], { work: true });
 }
-function polishTask() { return task('운전실 놋쇠 계기를 닦는 중', [step({ u: U(8522), v: .38, anim: 'tie', dur: 6, face: 1, hold: 'rag', say: stage() < 2 ? '반짝반짝, 새것처럼.' : null, done() { woman.hold = null; } })]); }
+function polishTask() { return task('운전실 놋쇠 계기를 닦는 중', [step({ u: U(9596), v: .38, anim: 'tie', dur: 6, face: 1, hold: 'rag', say: stage() < 2 ? '반짝반짝, 새것처럼.' : null, done() { woman.hold = null; } })]); }
 function blowdownTask() {
-  return task('보일러 찌꺼기를 빼내는 중', [step({ u: U(8522), v: .5, anim: 'turnWheel', dur: 3.6, face: 1, work: true, say: '조심… 푸쉬익—!',
+  return task('보일러 찌꺼기를 빼내는 중', [step({ u: U(9596), v: .5, anim: 'turnWheel', dur: 3.6, face: 1, work: true, say: '조심… 푸쉬익—!',
     ev: [[1.2, () => { for (let i = 0; i < 40; i++) parts.push({ k: 'steam', x: LOCO.cab1 + rand(20, 140), y: BOIL.bot + 60, vx: rand(-160, 160), vy: rand(-90, 20), life: rand(.8, 1.6), r: rand(5, 12) }); S.tankW = Math.max(0, S.tankW - 3); }]] })], { work: true });
 }
-function mapTask() { return task('노선도를 들여다보는 중', [step({ u: U(8402), v: .42, anim: 'look', dur: 8, face: 1, hold: 'notebook', say: stage() < 2 ? pick(['다음 물탑까지… 조금 남았네.', '이 선로, 어디까지 이어질까.', '지도에 없는 역이 너무 많아.']) : '…', done() { woman.hold = null; } })]); }
+function mapTask() { return task('노선도를 들여다보는 중', [step({ u: U(9476), v: .42, anim: 'look', dur: 8, face: 1, hold: 'notebook', say: stage() < 2 ? pick(['다음 물탑까지… 조금 남았네.', '이 선로, 어디까지 이어질까.', '지도에 없는 역이 너무 많아.']) : '…', done() { woman.hold = null; } })]); }
 function clockTask() { return task('벽시계 태엽을 감는 중', [step({ u: U(2030), v: .4, anim: 'tie', dur: 4, face: 1, say: stage() < 2 ? `지금은… ${timeStr()}. 정확해!` : null })]); }
-function brakeTestTask() { return task('석탄 칸 손 브레이크를 점검하는 중', [step({ u: U(7674), v: .35, anim: 'turnWheel', dur: 4, face: -1, work: true })], { work: true }); }
+function brakeTestTask() { return task('석탄 칸 손 브레이크를 점검하는 중', [step({ u: U(8748), v: .35, anim: 'turnWheel', dur: 4, face: -1, work: true })], { work: true }); }
 function tailLampTask() { return task('꼬리등에 기름을 채우는 중', [step({ u: U(64), v: .5, anim: 'tie', dur: 4, face: -1, say: stage() < 2 ? '뒤에서 누가 보면, 여기 기차가 있다는 걸 알겠지.' : null })]); }
 function sweepSnowTask() { return task('뒤 발판에 쌓인 눈을 쓸어내는 중', [step({ u: U(80), v: .7, anim: 'sort', dur: 6, face: -1, hold: 'broom', work: true, done() { woman.hold = null; } })], { work: true }); }
 function trainJobOptions() {
@@ -5247,12 +5304,12 @@ function startCrisis(kind) {
   S.stats.crises = (S.stats.crises || 0) + 1;
   const front = LOCO.front, st = stage();
   const toFront = (anim, hold, label, dur, tick, done) => [
-    step({ u: U(8607), v: .95, anim: 'stand', dur: .2, run: true, face: 1, label: '운전실로 달려가는 중' }),
+    step({ u: U(9681), v: .95, anim: 'stand', dur: .2, run: true, face: 1, label: '운전실로 달려가는 중' }),
     step({ anim: 'stand', dur: 30, face: 1, label: '열차가 멈추길 기다리는 중', until: () => TRAIN.speed < .04 }),
-    step({ u: U(8617), v: 2, anim: 'stand', dur: .3, face: 1, label: '기관차에서 내려서는 중' }),
+    step({ u: U(9691), v: 2, anim: 'stand', dur: .3, face: 1, label: '기관차에서 내려서는 중' }),
     step({ u: U(front + 150), v: 2, anim, dur, face: 1, hold, label, tick, done, work: true }),
-    step({ u: U(8617), v: 2, anim: 'stand', dur: .3, face: -1, label: '기관차로 돌아가는 중' }),
-    step({ u: U(8592), v: .7, anim: 'stand', dur: .6, face: -1 }),
+    step({ u: U(9691), v: 2, anim: 'stand', dur: .3, face: -1, label: '기관차로 돌아가는 중' }),
+    step({ u: U(9666), v: .7, anim: 'stand', dur: .6, face: -1 }),
   ];
   if (kind === 'hotbox') {
     const bx = pick(CAR_TRUCKS) + pick([-52, 52]); crisis.x = bx; crisis.cap = .45; crisis.deadline = 240;
@@ -5381,7 +5438,7 @@ function crisisBanner() {
   return L.join('   ');
 }
 function repairTaskIfNeeded() {
-  if (S.boilerDmg && S.stash.parts > 0 && !isNight()) return task('터진 증기 파이프를 고치는 중', [step({ u: U(8532), v: .45, anim: 'hammer', dur: 9, face: 1, hold: 'hammer', work: true, say: '이 정도는 고칠 수 있어.',
+  if (S.boilerDmg && S.stash.parts > 0 && !isNight()) return task('터진 증기 파이프를 고치는 중', [step({ u: U(9606), v: .45, anim: 'hammer', dur: 9, face: 1, hold: 'hammer', work: true, say: '이 정도는 고칠 수 있어.',
     done() { woman.hold = null; if (S.stash.parts > 0) { S.stash.parts--; S.boilerDmg = 0; log('🔩 증기 파이프를 고쳤다'); S.hope = Math.min(hopeCap(), S.hope + 6); } } })], { work: true });
   return null;
 }
@@ -5396,7 +5453,7 @@ const RELAPSE_KINDS = new Set(['pipe', 'coupler', 'brakes', 'lights', 'pressure'
 const NEED_SEARCH = { parts: '공구함에서 부품을 찾는 중', oil: '기름통을 흔들어 보는 중', boards: '판자를 찾는 중', coal: '석탄 칸 바닥을 긁어보는 중', fuel: '장작을 찾는 중', water: '물통을 흔들어 보는 중' };
 const NEED_LINE = { parts: '…부품이 없어.', oil: '…기름이 하나도 없어.', boards: '…판자가 없어. 천으로라도…', coal: '…석탄이 모자라.', fuel: '…장작이 없어.', water: '…물이 모자라.' };
 const RESCUE_LABEL = { parts: '받은 부품으로 제대로 고치는 중', oil: '받은 기름을 붓는 중', boards: '받은 판자를 대고 못을 박는 중', coal: '받은 석탄을 아궁이에 넣는 중', fuel: '받은 장작으로 불을 지피는 중', water: '받은 물을 끼얹는 중' };
-const TENDER_DROP = { u: U(8014), v: .5 };   // the open coal tender: the only place near the engine a crate can come down
+const TENDER_DROP = { u: U(9088), v: .5 };   // the open coal tender: the only place near the engine a crate can come down
 let forceCarIdx = null, respT = 0, miracleFX = 0;
 const jong = w => { w = String(w || ''); const ch = w.charCodeAt(w.length - 1) - 0xac00; return ch >= 0 && ch <= 11171 ? ch % 28 : 0; };   // Korean particles that fit the word
 const eul = w => w + (jong(w) ? '을' : '를'), ro = w => w + (jong(w) && jong(w) !== 8 ? '으로' : '로');
@@ -5407,19 +5464,19 @@ function haveNeed(n) {
   return (S.stash[n] || 0) > 0;
 }
 function pickCarIdx() { const f = forceCarIdx; forceCarIdx = null; return f !== null && CARS[f] ? f : Math.floor(Math.random() * CARS.length); }
-function crisisX(c) { if (c.x !== undefined) return c.x; if (c.win) return c.win.x + c.win.w / 2; if (c.car !== undefined) { const car = CARS[c.car]; return (car.x0 + car.x1) / 2; } return c.kind === 'fire' ? 600 : 8474; }
+function crisisX(c) { if (c.x !== undefined) return c.x; if (c.win) return c.win.x + c.win.w / 2; if (c.car !== undefined) { const car = CARS[c.car]; return (car.x0 + car.x1) / 2; } return c.kind === 'fire' ? 600 : 9548; }
 function dropSpotFor(c) { return crisisX(c) > 3500 ? TENDER_DROP : null; }   // null: the usual rear platform
 function crisisSpot(c) {   // where (and how) she puts the delivered thing to use
   const k = c.kind;
   if (k === 'pipe') return { u: U(c.x - 30), v: .3, anim: 'hammer', tool: 'hammer' };
   if (k === 'coupler') return { u: U(c.x), v: .62, anim: 'hammer', tool: 'hammer' };
   if (k === 'brakes') return { u: U(CARS[c.car].x1 - 170), v: .9, anim: 'crouch', tool: 'hammer' };
-  if (k === 'lights') return { u: U(8402), v: .4, anim: 'fix', tool: 'screwdriver' };
+  if (k === 'lights') return { u: U(9476), v: .4, anim: 'fix', tool: 'screwdriver' };
   if (k === 'pressure') return { ...STAND.gauge, anim: 'turnWheel', tool: null };
   if (k === 'hotbox') return { u: U(c.x), v: .9, anim: 'crouch', tool: 'oilcan' };
   if (k === 'window') return { u: U(c.win.x + c.win.w / 2), v: .38, anim: 'tie', tool: 'plank' };
   if (k === 'grate' || k === 'frozencoal') return { ...STAND.firebox, anim: 'shovel', tool: 'shovel' };
-  if (k === 'injector') return { u: U(8592), v: .85, anim: 'crouch', tool: null };
+  if (k === 'injector') return { u: U(9666), v: .85, anim: 'crouch', tool: null };
   if (k === 'emberfire') return { u: U(c.x - 60), v: .55, anim: 'pour', tool: 'wcan' };
   return { anim: 'fix', tool: null };
 }
@@ -5556,7 +5613,7 @@ function glowTarget() {   // ONE thing glows at a time — the most useful thing
   return {};
 }
 function responseUI() {
-  buildResponseUI(); updateDevicesUI();
+  buildResponseUI(); updateDevicesUI(); updateLeisureUI(); updateFacUI();
   const c = crisis, G = glowTarget(), item = G.item || null, ctl = G.ctl || null;
   document.querySelectorAll('#send button').forEach(b => b.classList.toggle('need', b.dataset.k === item));
   const reg = $('c-reg') && $('c-reg').closest('label'); if (reg) reg.classList.toggle('need', ctl === 'reg');
@@ -5570,6 +5627,7 @@ function responseUI() {
 }
 function responseTick(dt) {
   if (!running || S.dead || ending) return;
+  facTick(dt);
   const c = crisis;
   if (c && !c.seen) { c.seen = true; onCrisisBegin(c); }
   if (c && c.short && !c.shownShort && ((c.kind === 'hotbox' && c.wait === 'oil' && c.t > 3) || c.t > 25)) c.shownShort = true;
@@ -5607,7 +5665,7 @@ function responseTick(dt) {
       if (!crisis) S.relapse = null;
     }
   }
-  tutorialTick(dt); devTick(dt); routeTick(dt); noticeTick();
+  tutorialTick(dt); devTick(dt); routeTick(dt); noticeTick(); leisureTick();
   respT -= dt; if (respT <= 0) { respT = .2; responseUI(); }
 }
 /* ---- devices on the driver's stand: ways to reach into the train and help her directly ---- */
@@ -5729,7 +5787,7 @@ const NOTICE_ANIM = {
   airOpen: ['hug', null, '찬 바람에 몸을 웅크리는 중'], airClose: ['stand', null, '바람이 멎은 걸 느끼는 중'], cold: ['hug', null, '추위에 몸을 웅크리는 중'], warm: ['stand', null, '온기를 느끼는 중'],
   ash: ['look', 1, '앞쪽 소리에 귀를 기울이는 중'], water: ['look', 1, '보일러 소리에 귀를 기울이는 중'], stoke: ['look', 1, '불길 소리에 귀를 기울이는 중'], breath: ['look', 1, '김 빠지는 소리를 듣는 중'],
   oil: ['look', null, '바퀴 소리에 귀를 기울이는 중'], lightsOn: ['lookup', null, '켜진 불을 올려다보는 중'], lightsOff: ['lookup', null, '꺼진 불을 올려다보는 중'], emerOn: ['lookup', null, '붉은 불빛을 올려다보는 중'],
-  shutterClose: ['look', -1, '내려온 덧창을 바라보는 중'], shutterOpen: ['look', -1, '창밖을 바라보는 중'], garden: ['look', null, '물안개 소리에 귀를 기울이는 중'], dryer: ['stand', null, '따뜻한 바람을 느끼는 중'], dark: ['look', null, '어둠 속을 더듬는 중'], sand: ['look', 1, '바퀴 쪽 소리를 듣는 중'], heater: ['look', null, '보일러 소리를 듣는 중'], hurry: ['startle', null, '종소리에 놀라는 중'],
+  machine: ['look', null, '기계 소리에 귀를 기울이는 중'], shutterClose: ['look', -1, '내려온 덧창을 바라보는 중'], shutterOpen: ['look', -1, '창밖을 바라보는 중'], garden: ['look', null, '물안개 소리에 귀를 기울이는 중'], dryer: ['stand', null, '따뜻한 바람을 느끼는 중'], dark: ['look', null, '어둠 속을 더듬는 중'], sand: ['look', 1, '바퀴 쪽 소리를 듣는 중'], heater: ['look', null, '보일러 소리를 듣는 중'], hurry: ['startle', null, '종소리에 놀라는 중'],
 };
 function queueNotice(mood, delay, o) {
   o = o || {}; const grp = o.grp || mood;
@@ -5779,7 +5837,7 @@ function useDevice(k) {
     else log('💨 압력을 뺐다');
     devReact('breath');
   } else if (k === 'sand') {
-    S.sand--; for (let i = 0; i < 30; i++) parts.push({ k: 'dust', x: pick([8922, 9072, 9222]) + rand(-10, 10), y: RAIL_Y - 50 + rand(0, 40), vx: rand(-20, 20), vy: rand(40, 90), life: .9, r: rand(3, 6) });
+    S.sand--; for (let i = 0; i < 30; i++) parts.push({ k: 'dust', x: pick([9996, 10146, 10296]) + rand(-10, 10), y: RAIL_Y - 50 + rand(0, 40), vx: rand(-20, 20), vy: rand(40, 90), life: .9, r: rand(3, 6) });
     if (ck('slip')) return endCrisisBy('dev', '🪣 레일에 모래가 쏟아지자 바퀴가 다시 레일을 물었다');
     S.gripUntil = Date.now() + 180000; log('🪣 레일에 모래를 뿌렸다 — 한동안 바퀴가 덜 미끄러진다'); devReact('sand');
   } else if (k === 'stoke') {
@@ -5847,6 +5905,9 @@ function devTick(dt) {
   // headlamp: a little power, a little courage in the dark
   if (S.lampOn) { S.power = Math.max(0, (S.power === undefined ? 100 : S.power) - dt * .35); if ((isNight() || tunnel) && awake()) S.hope = Math.min(hopeCap(), S.hope + dt * .004); }
   lightTick(dt);
+  // per-car heating: strong cars burn extra steam, closed ones save it; the car she's in warms or chills her
+  if (!S.heatOff) { const extra = carHeatLv().reduce((a, l) => a + (l - 1), 0); S.steam = clamp(S.steam - dt * .012 * extra, 0, 100); }
+  { const ct = herCarTemp(); if (ct !== null && awake() && !nearFire()) { if (ct < 4) S.warmth = Math.max(0, S.warmth - dt * .006 * (4 - ct)); else if (ct > 16) S.warmth = Math.min(100, S.warmth + dt * .012); } }
   // shutters: warmer and safer, but no view and no sun for the greenhouse
   if (S.shutters) { if (!nearFire()) S.warmth = Math.min(100, S.warmth + dt * .006); if (daylight(S.hour) > .5 && awake()) S.hope = Math.max(0, S.hope - dt * .0015); }
   // warm air for the washing
@@ -5896,7 +5957,7 @@ function drawDeviceFX() {
 const litK = [];   // eased brightness per car, so lamps fade on and off rather than snapping
 let darkSaidT = -999, prevHerLit = null;
 function herCarIdx() { return CARS.indexOf(carAt(herX())); }
-function lightsState() { return S.lights || (S.lights = { mode: 'auto', cars: CARS.map(() => true) }); }
+function lightsState() { const L = S.lights || (S.lights = { mode: 'auto', cars: CARS.map(() => true) }); while (L.cars.length < CARS.length) L.cars.push(true); return L; }
 function carLitTarget(ci) {
   const L = lightsState();
   if (L.mode === 'all') return 1; if (L.mode === 'off') return 0; if (L.mode === 'manual') return L.cars[ci] ? 1 : 0;
@@ -5923,6 +5984,17 @@ function lightTick(dt) {
   prevHerLit = lit;
   if (herInDark() && awake()) { S.hope = Math.max(0, S.hope - dt * .003); if (t - darkSaidT > 80) { darkSaidT = t; queueNotice('dark', rand(2, 4), { grp: 'dark', cd: 60, p: .85, line: () => herInDark() && stage() < 3 ? pick(DARK_LINES) : null }); } }
 }
+/* ---- heating, car by car: off / normal / strong. Strong costs steam; off saves it; she feels the car she's in ---- */
+const HEAT_F = [.1, 1, 1.6];   // how much of the steam heat reaches a car at each setting
+function carHeatLv() { if (!S.carHeat) S.carHeat = CARS.map(() => 1); while (S.carHeat.length < CARS.length) S.carHeat.push(1); if (S.carHeat.length > CARS.length) S.carHeat.length = CARS.length; return S.carHeat; }
+function cycleCarHeat(ci) {
+  const H = carHeatLv(); if (S.heatOff) { S.heatOff = false; log('♨ 난방을 다시 켰다'); }
+  H[ci] = (H[ci] + 1) % 3; log(`♨ ${CAR_KO[CARS[ci].kind]} 난방 — ${['끔', '보통', '강'][H[ci]]}`);
+  if (ci === herCarIdx()) queueNotice(H[ci] === 0 ? 'cold' : 'warm', rand(4, 7), { grp: 'carheat', cd: 30, p: .7 });   // she feels it in the car she's in — after a while
+  S.stats.remote = (S.stats.remote || 0) + 1; updateUI(); save();
+}
+let carTempCache = null, carTempT = -9;
+function herCarTemp() { if (t - carTempT > .5) { carTempCache = carTemps(); carTempT = t; } const h = herCarIdx(); return h >= 0 && carTempCache ? carTempCache[h].t : null; }
 function setLightMode(m, ci) {
   const L = lightsState();
   if (ci !== undefined) { if (L.mode !== 'manual') { L.cars = CARS.map((c, i) => carLitTarget(i) > .5); L.mode = 'manual'; } L.cars[ci] = !L.cars[ci]; log(`💡 ${CAR_KO[CARS[ci].kind]} 불을 ${L.cars[ci] ? '켰다' : '껐다'}`); }
@@ -5942,10 +6014,10 @@ function buildDevicesUI() {
   if ($('devs')) return;
   const el = document.createElement('div'); el.id = 'devs';
   el.innerHTML = DEV_GROUPS.map(([gk, label]) => `<div class="devh">${label}</div><div class="devs">` + Object.keys(DEV).filter(k => DEV[k].grp === gk).map(k => `<button data-dev="${k}" title="${DEV[k].tip}"><span class="ic">${DEV[k].ic}</span><b>${DEV[k].name}</b><small id="dv-${k}"></small></button>`).join('') + '</div>').join('')
-    + `<div class="devh">💡 조명 <em id="lightInfo"></em></div><div class="lmode"><button data-lm="auto" title="그녀가 있는 칸과 가려는 칸만 밝혀요. 전기를 아껴요">자동</button><button data-lm="all" title="모든 칸을 밝혀요. 전기를 많이 써요">모두 켜기</button><button data-lm="off" title="모든 불을 꺼요">모두 끄기</button></div>`
-    + `<div class="lcars">${CARS.map((c, i) => `<button data-lc="${i}" title="${CAR_KO[c.kind]} 불 켜기/끄기">${CAR_SHORT[c.kind] || i}</button>`).join('')}</div>`;
+    + `<div class="devh">🏠 칸별 관리 <em id="lightInfo"></em></div><div class="lmode"><button data-lm="auto" title="그녀가 있는 칸과 가려는 칸만 밝혀요. 전기를 아껴요">💡 자동</button><button data-lm="all" title="모든 칸을 밝혀요. 전기를 많이 써요">💡 모두 켜기</button><button data-lm="off" title="모든 불을 꺼요">💡 모두 끄기</button></div>`
+    + `<div class="ccars">${CARS.map((c, i) => `<div class="cc"><b>${CAR_SHORT[c.kind] || i}</b><small id="ct-${i}"></small><button data-lc="${i}" title="${CAR_KO[c.kind]} 불 켜기/끄기">💡</button><button data-hc="${i}" title="${CAR_KO[c.kind]} 난방: 끔 → 보통 → 강 (강하게 하면 증기를 더 써요)" id="hc-${i}">♨</button></div>`).join('')}</div>`;
   $('c-msg').after(el);
-  el.addEventListener('click', e => { const m = e.target.closest('button[data-lm]'), c = e.target.closest('button[data-lc]'); if (m) setLightMode(m.dataset.lm); else if (c) setLightMode(null, +c.dataset.lc); });
+  el.addEventListener('click', e => { const m = e.target.closest('button[data-lm]'), c = e.target.closest('button[data-lc]'), h = e.target.closest('button[data-hc]'); if (m) setLightMode(m.dataset.lm); else if (c) setLightMode(null, +c.dataset.lc); else if (h) cycleCarHeat(+h.dataset.hc); });
   const dc = document.createElement('div'); dc.id = 'devCare'; el.after(dc);   // how well she has kept the equipment car
   el.addEventListener('click', e => { const b = e.target.closest('button[data-dev]'); if (b && !b.disabled) useDevice(b.dataset.dev); });
 }
@@ -5960,8 +6032,11 @@ function updateDevicesUI() {
   }
   { const L = lightsState(), lit = CARS.map((c, i) => carLitTarget(i) > .5), n = lit.filter(Boolean).length, her = herCarIdx();   // the lighting panel
     document.querySelectorAll('#devs button[data-lm]').forEach(b => b.classList.toggle('on', b.dataset.lm === L.mode));
-    document.querySelectorAll('#devs button[data-lc]').forEach(b => { const i = +b.dataset.lc; b.classList.toggle('on', lit[i]); b.classList.toggle('her', i === her); });
-    if ($('lightInfo')) $('lightInfo').textContent = lightsNeeded() ? `${n}칸 켜짐 · 전기 ${Math.round(S.power === undefined ? 100 : S.power)}%` : '낮이라 불이 필요 없어요'; }
+    document.querySelectorAll('#devs button[data-lc]').forEach(b => { const i = +b.dataset.lc; b.classList.toggle('on', lit[i]); });
+    const T = carTemps(), H = carHeatLv();
+    CARS.forEach((c, i) => { const ct = $('ct-' + i), hb = $('hc-' + i); if (ct) { ct.textContent = T[i].t + '°'; ct.style.color = tempColor(T[i].t); ct.parentElement.classList.toggle('her', i === her); }
+      if (hb) { const lv = S.heatOff ? 0 : H[i]; hb.textContent = ['♨ 끔', '♨ 보통', '♨ 강'][lv]; hb.className = 'hl' + lv; } });
+    if ($('lightInfo')) $('lightInfo').textContent = (lightsNeeded() ? `💡 ${n}칸` : '💡 낮') + ` · 전기 ${Math.round(S.power === undefined ? 100 : S.power)}%` + (S.heatOff ? ' · 난방 전체 꺼짐' : ''); }
   { const c = Math.round(S.devCare === undefined ? 70 : S.devCare), col = c >= 60 ? 'var(--good)' : c >= 25 ? 'var(--warn)' : 'var(--bad)';
     $('devCare').innerHTML = `설비칸 정비 <b style="color:${col}">${c}%</b> · ${c >= 60 ? '장치가 빨리 준비돼요' : c >= 25 ? '보통' : '장치가 느려졌어요'}`; }
   return crisisNeed;
@@ -6316,13 +6391,13 @@ function maintenanceTask(urgentOnly) {
   const car = pick(CARS), fixTo = (k, v) => () => { S.wear[k] = Math.min(100, Math.max(S.wear[k], v)); S.stats.repairs = (S.stats.repairs || 0) + 1; maybeInjure(WEAR[k].name); log(`🔧 ${WEAR[k].name} 정비 완료`); };
   const T = (label, steps) => task(label, steps, { work: true });
   switch (worst) {
-    case 'boiler': return T('보일러 밸브와 못을 조이는 중', [step({ u: U(8552), v: .45, anim: 'turnWheel', dur: 3, face: 1, work: true }), step({ anim: 'tie', dur: 5, face: 1, hold: 'hammer', say: stage() < 2 ? '새는 데 없이, 꽉.' : null, done() { woman.hold = null; fixTo('boiler', 92)(); } })]);
+    case 'boiler': return T('보일러 밸브와 못을 조이는 중', [step({ u: U(9626), v: .45, anim: 'turnWheel', dur: 3, face: 1, work: true }), step({ anim: 'tie', dur: 5, face: 1, hold: 'hammer', say: stage() < 2 ? '새는 데 없이, 꽉.' : null, done() { woman.hold = null; fixTo('boiler', 92)(); } })]);
     case 'grate': return T('아궁이 바닥의 재 덩어리를 긁어내는 중', [step({ ...STAND.firebox, anim: 'shovel', dur: 6, face: 1, hold: 'rake', work: true, ev: [[1.2, fireboxFlare], [3.4, fireboxFlare]], done() { woman.hold = null; fixTo('grate', 95)(); } })]);
     case 'bearings': { const bx = pick(CAR_TRUCKS) + pick([-52, 52]); return T('바퀴 축에 기름을 치는 중', [step({ u: U(bx), v: .9, anim: 'crouch', dur: 5, face: 1, hold: 'oilcan', work: true, done() { woman.hold = null; fixTo('bearings', S.stash.oil > 0 ? 100 : 85)(); } })]); }
     case 'brakes': return T('브레이크 판 간격을 조정하는 중', [step({ u: U(car.x1 - 40), v: .85, anim: 'crouch', dur: 5, face: 1, hold: 'hammer', work: true, done() { woman.hold = null; fixTo('brakes', 92)(); } })]);
     case 'couplers': { const gx = pick(COUPLERS); return T('연결 고리 핀을 점검하고 조이는 중', [step({ u: U(gx), v: .62, anim: 'hammer', dur: 5, face: 1, hold: 'hammer', work: true, done() { woman.hold = null; fixTo('couplers', 94)(); } })]); }
     case 'pipes': return T('난방관 이음새를 감싸는 중', [step({ u: U(car.x0 + rand(200, 800)), v: .2, anim: 'crouch', dur: 5, face: 1, hold: 'rag', work: true, done() { woman.hold = null; fixTo('pipes', 92)(); } })]);
-    case 'lights': return T('발전기 부품을 손보는 중', [step({ u: U(8402), v: .4, anim: 'fix', dur: 6, face: 1, hold: 'screwdriver', work: true, done() { woman.hold = null; fixTo('lights', 95)(); } })]);
+    case 'lights': return T('발전기 부품을 손보는 중', [step({ u: U(9476), v: .4, anim: 'fix', dur: 6, face: 1, hold: 'screwdriver', work: true, done() { woman.hold = null; fixTo('lights', 95)(); } })]);
     case 'windows': { const wn = pick(winsOf(car)); return T('창틀 틈을 메우는 중', [step({ u: U(wn.x + wn.w / 2), v: .4, anim: 'tie', dur: 5, face: 1, hold: 'rag', work: true, done() { woman.hold = null; fixTo('windows', 90)(); } })]); }
   }
   return null;
@@ -6385,7 +6460,7 @@ function startBreakdown(kind) {
     interrupt(task('어둠 속에서 발전기를 고치는 중', [
       startle(st < 2 ? '…불이 왜 꺼져?' : '…어두워.'),
       step({ anim: 'stand', dur: 1.4, face: 1, hold: 'flashlight', label: '손전등을 켜는 중', say: st < 2 ? '괜찮아. 손전등 있어.' : null }),
-      step({ u: U(8402), v: .4, anim: 'fix', dur: 8, face: 1, hold: 'screwdriver', label: '발전기 부품을 갈아 끼우는 중', work: true, done() { woman.hold = null; S.wear.lights = 92; S.flickerT = 1; resolveCrisis('💡 발전기를 고쳐 불이 다시 들어왔다'); } }),
+      step({ u: U(9476), v: .4, anim: 'fix', dur: 8, face: 1, hold: 'screwdriver', label: '발전기 부품을 갈아 끼우는 중', work: true, done() { woman.hold = null; S.wear.lights = 92; S.flickerT = 1; resolveCrisis('💡 발전기를 고쳐 불이 다시 들어왔다'); } }),
     ], { crisis: true, work: true }));
   } else if (kind === 'rocks') {
     Object.assign(crisis, { cap: 1, approach: 6, msg: '산사태로 바위가 선로를 덮쳤어요. 이대로면 충돌해요!', rocks: Array.from({ length: 9 }, (_, i) => ({ x: LOCO.front + 210 + i * 30 + rand(-12, 12), r: rand(14, 30), y: -rand(200, 600), vy: 0, landed: false })) });
@@ -6394,14 +6469,14 @@ function startBreakdown(kind) {
     const front = LOCO.front;
     interrupt(task('선로의 바위를 치우는 중', [
       startle(st < 2 ? '바위가…! 꽉 잡아!' : '…!'),
-      step({ u: U(8607), v: .95, anim: 'stand', dur: .2, run: true, face: 1, label: '운전실로 달려가는 중' }),
+      step({ u: U(9681), v: .95, anim: 'stand', dur: .2, run: true, face: 1, label: '운전실로 달려가는 중' }),
       step({ anim: 'stand', dur: 30, face: 1, label: '열차가 멈추길 기다리는 중', until: () => TRAIN.speed < .04 }),
-      step({ u: U(8617), v: 2, anim: 'stand', dur: .3, face: 1, label: '기관차에서 내려서는 중' }),
+      step({ u: U(9691), v: 2, anim: 'stand', dur: .3, face: 1, label: '기관차에서 내려서는 중' }),
       step({ u: U(front + 170), v: 2, anim: 'shovel', dur: 30, face: 1, hold: 'crowbar', label: '쇠지렛대로 바위를 굴려내는 중', work: true,
         tick(dt) { if (!crisis) { this.lt = this.dur; return; } crisis.amt = Math.max(0, crisis.amt - dt / 24); if (Math.random() < dt * 3) parts.push({ k: 'dust', x: front + 240 + rand(0, 200), y: RAIL_Y - rand(0, 20), vx: rand(-20, 60), vy: -rand(10, 40), life: 1.6, r: rand(10, 20) }); if (crisis.amt <= 0) this.lt = this.dur; },
         done() { woman.hold = null; resolveCrisis('🪨 바위를 모두 치우고 다시 출발했다'); } }),
-      step({ u: U(8617), v: 2, anim: 'stand', dur: .3, face: -1, label: '기관차로 돌아가는 중' }),
-      step({ u: U(8592), v: .7, anim: 'stand', dur: .6, face: -1 }),
+      step({ u: U(9691), v: 2, anim: 'stand', dur: .3, face: -1, label: '기관차로 돌아가는 중' }),
+      step({ u: U(9666), v: .7, anim: 'stand', dur: .6, face: -1 }),
     ], { crisis: true, work: true }));
   }
   notify(C, crisis.msg); log(`⚠ ${C}`);
@@ -6537,12 +6612,12 @@ function startExtra(kind) {
   S.stats.crises = (S.stats.crises || 0) + 1;
   if (kind === 'slip') {
     Object.assign(crisis, { cap: .12, deadline: 55, msg: '얼음 때문에 큰 바퀴가 헛돌아요. 기차가 앞으로 나가지 못해요!' });
-    focusOn(9207, RAIL_Y - 60);
+    focusOn(10281, RAIL_Y - 60);
     interrupt(task('헛도는 바퀴에 모래를 뿌리는 중', [
       startle(st < 2 ? '바퀴가… 헛돌아!' : '…!'),
-      step({ u: U(8552), v: .5, anim: 'stand', dur: .1, run: true, face: 1, label: '운전실로 달려가는 중' }),
-      step({ u: U(8552), v: .5, anim: 'turnWheel', dur: 2.4, face: 1, work: true, label: '속도 밸브를 잠가 증기를 줄이는 중', say: st < 2 ? '천천히… 천천히…' : null }),
-      step({ u: U(8514), v: .5, anim: 'tie', dur: 3.4, face: 1, work: true, label: '모래 레버를 당기는 중',
+      step({ u: U(9626), v: .5, anim: 'stand', dur: .1, run: true, face: 1, label: '운전실로 달려가는 중' }),
+      step({ u: U(9626), v: .5, anim: 'turnWheel', dur: 2.4, face: 1, work: true, label: '속도 밸브를 잠가 증기를 줄이는 중', say: st < 2 ? '천천히… 천천히…' : null }),
+      step({ u: U(9588), v: .5, anim: 'tie', dur: 3.4, face: 1, work: true, label: '모래 레버를 당기는 중',
         tick(dt) { if (crisis) { crisis.sanding = true; crisis.amt = Math.max(0, crisis.amt - dt / 3); } },
         done() { S.wear.bearings = Math.max(0, S.wear.bearings - 6); resolveCrisis('❄ 모래를 뿌려 바퀴가 다시 레일을 물었다'); } }),
     ], { crisis: true, work: true }));
@@ -6575,7 +6650,7 @@ function startExtra(kind) {
     interrupt(task('얼어붙은 물관을 녹이는 중', [
       startle(st < 2 ? '물 눈금이… 내려가고 있어!' : '…물이.'),
       step({ ...STAND.firebox, anim: 'shovel', dur: 2, run: true, face: 1, hold: 'shovel', label: '아궁이에서 시뻘건 숯을 퍼내는 중', ev: [[1, fireboxFlare]] }),
-      step({ u: U(8592), v: .85, anim: 'crouch', dur: 7, face: 1, label: '숯불로 물관을 녹이는 중', work: true,
+      step({ u: U(9666), v: .85, anim: 'crouch', dur: 7, face: 1, label: '숯불로 물관을 녹이는 중', work: true,
         tick(dt) { if (!crisis) return; crisis.amt = Math.max(0, crisis.amt - dt / 6.5); if (Math.random() < dt * 10) parts.push({ k: 'steam', x: LOCO.cab1 - 20 + rand(-10, 10), y: CAR.floorF - rand(0, 20), vx: rand(-30, 30), vy: -rand(30, 70), life: .9, r: rand(3, 7) }); },
         done() { woman.hold = null; resolveCrisis('🧊 물관을 녹여 물이 다시 흐른다'); } }),
     ], { crisis: true, work: true }));
@@ -6586,8 +6661,8 @@ function updateExtra(dt) {
   const c = crisis, k = c.kind;
   if (k === 'slip') {
     slipAng += dt * (c.sanding ? 2 : 14);
-    if (Math.random() < dt * 30) parts.push({ k: 'ember', x: pick([8982, 9132, 9282, 9432]) + rand(-30, 30), y: RAIL_Y - 2, vx: rand(-260, 60), vy: -rand(40, 160), life: rand(.3, .6) });
-    if (c.sanding && Math.random() < dt * 20) parts.push({ k: 'dust', x: pick([8922, 9072, 9222]) + rand(-10, 10), y: RAIL_Y - 50 + rand(0, 40), vx: rand(-20, 20), vy: rand(40, 90), life: .8, r: rand(3, 6) });
+    if (Math.random() < dt * 30) parts.push({ k: 'ember', x: pick([10056, 10206, 10356, 10506]) + rand(-30, 30), y: RAIL_Y - 2, vx: rand(-260, 60), vy: -rand(40, 160), life: rand(.3, .6) });
+    if (c.sanding && Math.random() < dt * 20) parts.push({ k: 'dust', x: pick([9996, 10146, 10296]) + rand(-10, 10), y: RAIL_Y - 50 + rand(0, 40), vx: rand(-20, 20), vy: rand(40, 90), life: .8, r: rand(3, 6) });
     if (Math.random() < dt * 4) parts.push({ k: 'smoke', x: LOCO.stack.x + rand(-8, 8), y: LOCO.stack.y, vx: -rand(10, 60), vy: -rand(80, 160), life: 2, r: rand(14, 22) });
   }
   if (k === 'frozencoal' || k === 'injector') S.steam = Math.max(0, S.steam - dt * .9 * c.amt);
@@ -6911,8 +6986,8 @@ function startOverspeed() {   // too fast for these old rails
   S.stats.crises = (S.stats.crises || 0) + 1; focusOn(LOCO.cab1 - 60, CAR.floorB - 60);
   log('⚠ 과속! 낡은 레일 위에서 차체가 날뛴다'); notify('과속 — 탈선 위기', '속도 레버를 줄이세요!');
   interrupt(task('과속을 막는 중', [startle(stage() < 2 ? '너무 빨라! 이러다 탈선해!' : '…!'),
-    step({ u: U(8522), v: .5, anim: 'stand', dur: .1, run: true, face: 1, label: '운전실로 달려가는 중' }),
-    step({ u: U(8522), v: .5, anim: 'brace', dur: 14, face: 1, label: '난간을 붙잡고 버티는 중', until: () => !crisis || crisis.kind !== 'overspeed' })], { crisis: true }));
+    step({ u: U(9596), v: .5, anim: 'stand', dur: .1, run: true, face: 1, label: '운전실로 달려가는 중' }),
+    step({ u: U(9596), v: .5, anim: 'brace', dur: 14, face: 1, label: '난간을 붙잡고 버티는 중', until: () => !crisis || crisis.kind !== 'overspeed' })], { crisis: true }));
 }
 function ebEffortTask() {   // between the big attempts she keeps working at it: pressure up, brake rigging checked, shoes knocked, valves tried, the manual searched
   if (isNight() || nearDeath()) return null;
@@ -6937,7 +7012,7 @@ function ebStruggleTask() {   // the brake won't let go, and nothing she does ca
   if (S.ebTries >= 4 && stT < 380) S.ebTries = 3;
   const n = S.ebTries, st = stage();
   S.ebCool = t + [0, rand(45, 80), rand(60, 100), rand(80, 130)][Math.min(3, n)] || 0;
-  const valve = { u: U(8526), v: .55 }, lever = { u: U(8488), v: .5 };
+  const valve = { u: U(9600), v: .55 }, lever = { u: U(9562), v: .5 };
   if (S.steam < 40 && S.coal > 4 && n <= 1) { const tk = shovelTask(); tk.label = '다시 출발하려고 보일러 압력을 올리는 중'; return tk; }
   if (n === 1) return task('잠긴 브레이크를 풀어보는 중', [
     step({ ...valve, anim: 'turnWheel', dur: 4, run: true, face: 1, work: true, label: '브레이크 밸브를 돌려보는 중', say: pick(['왜 안 풀려…?', '이상하다. 분명 돌아가야 하는데.']) }),
@@ -6945,7 +7020,7 @@ function ebStruggleTask() {   // the brake won't let go, and nothing she does ca
   ], { work: true });
   if (n === 2) return task('브레이크 장치와 씨름하는 중', [
     step({ ...valve, anim: 'turnWheel', dur: 3, run: true, face: 1, work: true, label: '밸브를 온 힘으로 돌리는 중', say: pick(['풀려… 풀려, 제발!', '움직이라고!!']) }),
-    step({ u: U(8478), v: .8, anim: 'hammer', dur: 5, face: 1, hold: 'hammer', work: true, label: '브레이크 장치를 망치로 내리치는 중', say: '이 망할 거…!!', done() { woman.hold = null; TRAIN.jolt = .3; if (audioOn()) sfxClank(); } }),
+    step({ u: U(9552), v: .8, anim: 'hammer', dur: 5, face: 1, hold: 'hammer', work: true, label: '브레이크 장치를 망치로 내리치는 중', say: '이 망할 거…!!', done() { woman.hold = null; TRAIN.jolt = .3; if (audioOn()) sfxClank(); } }),
     step({ ...STAND.firebox, anim: 'shovel', dur: 2.4, face: 1, hold: 'shovel', label: '압력이라도 더 올려보는 중', ev: [[1.2, () => { fireboxFlare(); S.steam = Math.min(100, S.steam + 10); }]], done() { woman.hold = null; } }),
   ], { work: true });
   if (n === 3) return task('아무리 해도 움직이지 않는 열차 앞에서', [
@@ -6957,7 +7032,7 @@ function ebStruggleTask() {   // the brake won't let go, and nothing she does ca
   S.hope = Math.max(0, S.hope - 5); addScar(.6);
   log('😞 그녀가 주저앉았다');
   return task('주저앉아 우는 중', [
-    step({ u: U(8448), v: .6, anim: 'cry', dur: 14, face: 1, label: '주저앉아 우는 중', say: pick(st < 2 ? ['…안 돼. 아무것도 안 돼.', '멈추면 끝인데… 나 여기서 끝나는 거야?'] : ['…이제 됐어. 그냥 다 멈춰버려.', '…지쳤어. 정말로.']), sayDur: 5,
+    step({ u: U(9522), v: .6, anim: 'cry', dur: 14, face: 1, label: '주저앉아 우는 중', say: pick(st < 2 ? ['…안 돼. 아무것도 안 돼.', '멈추면 끝인데… 나 여기서 끝나는 거야?'] : ['…이제 됐어. 그냥 다 멈춰버려.', '…지쳤어. 정말로.']), sayDur: 5,
       start() { for (let i = 0; i < 6; i++) setTimeout(() => { const p = roofPos(woman.u, woman.v); parts.push({ k: 'tear', x: p.x + 8, y: p.y - 60, vx: rand(-5, 5), vy: 30, life: 1.2 }); }, i * 900); } }),
     step({ anim: 'hug', dur: 10, face: 1, label: '무릎을 끌어안고 멍하니 있는 중' }),
   ]);
@@ -7289,6 +7364,9 @@ function composeDiary() {
   if (notes.includes('route_wind_bad')) L.push('다리 위 바람에 창틀이 상했다.');
   if (notes.includes('route_cold')) L.push('오늘은 유난히 추운 길을 지났다. 그래도 따뜻하게 버텼다.');
   if (notes.includes('route_cold_bad')) L.push('뼛속까지 얼어붙는 추위였다.');
+  if (notes.includes('tailview')) L.push(pick(['맨 뒤에 나가 지나온 길을 오래 바라봤다. 많이 왔다.', '선로가 멀어지는 걸 보고 있으니 마음이 조금 가벼워졌다.']));
+  if (notes.includes('stars')) L.push('맑은 밤이었다. 별이 아직 저렇게 많다.');
+  else if (notes.includes('leisure') && !notes.includes('tailview')) L.push(pick(['오늘은 잠깐 쉬었다. 쉬는 것도 버티는 일이다.', '짬을 내서 좋아하는 걸 했다. 그거면 됐다.']));
   if (notes.includes('shower')) L.push(pick(['오늘은 따뜻한 물로 씻었다. 사람이 된 기분이다.', '보일러를 데워 샤워를 했다. 이 맛에 버틴다.']));
   if (notes.includes('devcare')) L.push('설비칸 장치들을 손봤다. 모래도 채워 두었다.');
   if (notes.includes('trainhelp')) L.push(pick(['오늘도 기차가 나를 도왔다. 이 기차는 살아 있는 걸까.', '기차가 또 나를 지켜줬다. 고마워, 기차야.', '혼자가 아니다. 이 기차가 있다.']));
@@ -7381,10 +7459,10 @@ const OMENS = {
   brakes:   { crisis: 'brakes', need: null, tool: 'hammer', x: () => pick(CARS).x1 - 40, v: .85, anim: 'crouch', full: '브레이크 판 간격을 맞추는 중', sign: '브레이크가 살짝 끌리는 소리', fixed: '끌리던 브레이크를 미리 손봤다' },
   couplers: { crisis: 'coupler', need: 'parts', tool: 'hammer', x: () => pick(COUPLERS), v: .62, anim: 'hammer', full: '헐거운 연결 고리 핀을 새것으로 바꾸는 중', temp: '연결 고리 핀에 철사를 감아 고정하는 중', sign: '칸 사이에서 덜컹거리는 소리', fixed: '헐거워지던 연결 고리를 미리 조였다' },
   pipes:    { crisis: 'pipe', need: 'parts', tool: 'rag', x: () => pick(CARS).x0 + rand(200, 800), v: .2, anim: 'crouch', full: '새는 난방관 이음새를 갈아 끼우는 중', temp: '새는 이음새를 젖은 천으로 동여매는 중', sign: '난방관에서 쉭쉭 새는 소리', fixed: '새던 난방관을 미리 막았다' },
-  lights:   { crisis: 'lights', need: null, tool: 'screwdriver', x: () => 8402, v: .4, anim: 'fix', full: '발전기 부품을 닦는 중', sign: '전등이 가끔 깜박인다', fixed: '깜박이던 발전기를 미리 손봤다' },
+  lights:   { crisis: 'lights', need: null, tool: 'screwdriver', x: () => 9476, v: .4, anim: 'fix', full: '발전기 부품을 닦는 중', sign: '전등이 가끔 깜박인다', fixed: '깜박이던 발전기를 미리 손봤다' },
   windows:  { crisis: 'window', need: 'boards', tool: 'rag', x: () => { const w = pick(winsOf(pick(CARS))); return w.x + w.w / 2; }, v: .4, anim: 'tie', full: '금 간 창틀에 덧대는 나무를 대는 중', temp: '금 간 유리에 천을 덧대 붙이는 중', sign: '창틀이 바람에 덜덜 떨린다', fixed: '흔들리던 창틀을 미리 덧댔다' },
-  boiler:   { crisis: 'pressure', need: null, tool: 'hammer', x: () => 8552, v: .45, anim: 'turnWheel', full: '보일러 밸브를 조이고 김을 빼는 중', sign: '압력계 바늘이 자꾸 떨린다', fixed: '불안하던 보일러 압력을 미리 잡았다' },
-  grate:    { crisis: 'grate', need: null, tool: 'rake', x: () => 8467, v: .55, anim: 'shovel', full: '아궁이 바닥의 재 덩어리를 긁어내는 중', sign: '아궁이 불길이 고르지 않다', fixed: '막히기 시작한 아궁이 바닥을 미리 긁어냈다' },
+  boiler:   { crisis: 'pressure', need: null, tool: 'hammer', x: () => 9626, v: .45, anim: 'turnWheel', full: '보일러 밸브를 조이고 김을 빼는 중', sign: '압력계 바늘이 자꾸 떨린다', fixed: '불안하던 보일러 압력을 미리 잡았다' },
+  grate:    { crisis: 'grate', need: null, tool: 'rake', x: () => 9541, v: .55, anim: 'shovel', full: '아궁이 바닥의 재 덩어리를 긁어내는 중', sign: '아궁이 불길이 고르지 않다', fixed: '막히기 시작한 아궁이 바닥을 미리 긁어냈다' },
   stove:    { crisis: 'fire', need: null, tool: 'broom', x: () => 640, v: .55, anim: 'sort', full: '난로 앞 불티를 쓸고 문을 단단히 닫는 중', sign: '난로에서 불티가 튄다', fixed: '난로에서 튀던 불티를 미리 정리했다' },
 };
 const OMEN_PART = { bearings: 1, brakes: 1, couplers: 1, pipes: 1, lights: 1, windows: 1, boiler: 1, grate: 1 };
@@ -7535,6 +7613,7 @@ function catchUp(sec, opts) {
   }
   if (ev.fixed) for (const k in WEAR) if (S.wear[k] <= 56) S.wear[k] = rand(72, 88);   // the chores she got round to while no one watched
   if (S.inflight) { ev.got = S.inflight; storeItem(S.inflight, itemInfo(S.inflight).qty); S.inflight = null; crate = null; drone.phase = 'idle'; }
+  ev.made = facCatchUp(H);   // the machines kept working, and she emptied their trays as she went
   S.omen = null; S.omenT = Math.max(S.omenT || 0, 600); S.nextCrisisR = Math.max(S.nextCrisisR || 0, 900);
   S.boilW = Math.max(S.boilW === undefined ? 80 : S.boilW, 70); S.route = null;   // she kept the boiler watered while you were gone; no stretch of road left half-done
   if (!S.clockSync) { S.hour += H; while (S.hour >= 24) { S.hour -= 24; if (!(opts && opts.noDays)) S.day++; } }
@@ -7543,6 +7622,7 @@ function catchUp(sec, opts) {
   if (ev.got) bits.push(`보급 상자(${itemInfo(ev.got).ic})를 챙겼고`);
   if (ev.ate) bits.push(`${ev.ate}번 끼니를 챙겼고`);
   if (ev.fruit) bits.push(`열매를 ${ev.fruit}개 땄고`);
+  if (ev.made) bits.push(`기계가 만든 물자를 ${ev.made}번 꺼내 정리했고`);
   if (ev.logs) bits.push(`난로에 장작을 ${ev.logs}번 넣었고`);
   if (ev.fixed) bits.push('기차 여기저기를 손봤고');
   if (ev.slept > 2) bits.push('잠도 잤다');
@@ -7910,7 +7990,9 @@ function arrangePanel() {
   if (dsec && ft) { const bat = ft.querySelector('.battery'); if (bat) { bat.style.margin = '0 0 8px'; const lb = document.createElement('span'); lb.textContent = '배터리'; lb.style.cssText = 'font-size:11px;color:var(--muted);white-space:nowrap'; bat.prepend(lb); dsec.querySelector('h3').after(bat); } ft.remove(); }
   if (S.focus) S.focus.running = false;
   // what's left in the store, one quiet line under the send buttons (the separate stash section is hidden)
-  if (dsec) { const sl = document.createElement('div'); sl.id = 'stashline'; sl.style.cssText = 'font-size:11px;color:var(--muted);margin-top:5px;line-height:1.5'; $('drone').after(sl); }
+  // what's on the train, at a glance: a small section of its own right under her
+  { const ks = document.createElement('div'); ks.className = 'sec'; ks.innerHTML = '<h3>기차 안 물자 <em></em></h3><div id="stock"></div>'; panel.appendChild(ks); }
+  buildFacSection(panel);   // the machines that make those supplies
   { const ss = secOf('마지막 칸 비축품'); if (ss) ss.style.display = 'none'; }
   // her bars: body only (wet clothes and boiler pressure are shown elsewhere)
   for (const id of ['b-wet', 'b-steam']) { const r = $(id) && $(id).closest('.bar'); if (r) r.style.display = 'none'; }
@@ -7923,8 +8005,13 @@ function arrangePanel() {
     if (wx) sub(wx, '날씨');
     if (tm) sub(tm, '시간 흐름');
   }
+  buildLeisureSection(panel);   // her time off: what you can suggest
+  // the background song's player lives in the panel, in a section of its own
+  { const ms = document.createElement('div'); ms.className = 'sec'; ms.innerHTML = '<h3>배경 음악 <em>🔊 / M 키로 켜고 꺼요</em></h3>';
+    const yw = $('ytWrap'); if (yw) { ms.appendChild(yw); const hint = document.createElement('div'); hint.id = 'ytHint'; hint.textContent = '게임을 시작하면 재생돼요'; ms.appendChild(hint); }
+    panel.appendChild(ms); }
   // order: how she is → supplies → her diary → the rest, folded
-  const order = ['상태', '기차 상태', '드론 보급', '기관 제어', '그녀의 기록', '마지막 칸 고치기', '사건 기록', '설정'];   // her, the train, then the two ways to help
+  const order = ['상태', '기차 안 물자', '생산 시설', '기차 상태', '드론 보급', '기관 제어', '그녀의 쉬는 시간', '그녀의 기록', '배경 음악', '마지막 칸 고치기', '사건 기록', '설정'];   // her, the train, the ways to help, her time off
   const anchor = $('crisis'); let after = anchor;
   for (const name of order) { const s = name === '기관 제어' ? cs : secOf(name); if (s) { after.after(s); after = s; } }
   // folding
@@ -7937,7 +8024,7 @@ function arrangePanel() {
     h.addEventListener('click', e => { if (e.target.closest('button')) return; s.classList.toggle('closed'); uiClosed = [...panel.querySelectorAll('.sec.closed')].map(x => x.dataset.key); try { localStorage.setItem(UI_KEY, JSON.stringify(uiClosed)); } catch (err) {} });
   });
   const st = document.createElement('style');
-  st.textContent = `.sec.closed>:not(h3){display:none!important}.sec.closed>h3{margin:0}h3.fold{justify-content:flex-start;gap:4px}h3.fold em{margin-left:auto;text-align:right}#away button{background:rgba(255,255,255,.1);border:1px solid var(--line);border-radius:6px;color:var(--text);cursor:pointer}h3.fold::before{content:'▾';margin-right:5px;color:var(--muted)}.sec.closed>h3.fold::before{content:'▸'}
+  st.textContent = `.sec.closed>:not(h3){display:none!important}.sec.closed>h3[data-sub]{display:none!important}.sec.closed>h3{margin:0}h3.fold{justify-content:flex-start;gap:4px}h3.fold em{margin-left:auto;text-align:right}#away button{background:rgba(255,255,255,.1);border:1px solid var(--line);border-radius:6px;color:var(--text);cursor:pointer}h3.fold::before{content:'▾';margin-right:5px;color:var(--muted)}.sec.closed>h3.fold::before{content:'▸'}
   #mods,#dmode{display:none!important}
   .grid{grid-template-columns:repeat(5,1fr)!important}.item{white-space:nowrap;font-size:10.5px;overflow:hidden;text-overflow:ellipsis}#ctrl{margin-top:0}`;
   document.head.appendChild(st);
@@ -7950,7 +8037,31 @@ function updatePanelSummaries() {
   ensureWear(); let worst = null; for (const k in WEAR) if (!worst || S.wear[k] < S.wear[worst]) worst = k;
   set('기차 상태', S.wear[worst] < 40 ? `<span style="color:var(--warn)">${WEAR[worst].ic} ${WEAR[worst].name} ${Math.round(S.wear[worst])}%</span>` : '양호');
   set('사건 기록', '');
-  const sl = $('stashline'); if (sl) sl.innerHTML = '남은 물자 ' + ['food', 'water', 'fuel', 'med', 'parts'].map(k => `${STASH_INFO[k].ic}<b style="color:${S.stash[k] <= 0 ? 'var(--bad)' : 'var(--text)'};font-weight:500">${S.stash[k]}</b>`).join(' ') + ` ⚫<b style="color:${S.coal < 15 ? 'var(--bad)' : 'var(--text)'};font-weight:500">${Math.round(S.coal)}</b>`;
+  updateStockUI(set);
+}
+// supplies on board: one tile each, red when gone, amber when it's the last one
+let stockHTML = '';
+function updateStockUI(set) {
+  const box = $('stock'); if (!box) return;
+  const n = k => S.stash[k] || 0, pct = v => Math.round(clamp(v, 0, 100));
+  const rows = [
+    ['🥫', '통조림', n('food') + (S.kitchenStock || 0), 0, 1],
+    ['🍎', '열매', n('fish'), 0, 1],
+    ['💧', '생수', n('water'), 0, 1],
+    ['🪣', '빗물통', pct(S.barrel), 15, 35, '%'],
+    ['🪵', '연료', n('fuel'), 0, 1],
+    ['⚫', '석탄', pct(S.coal), 12, 30, '%'],
+    ['💊', '구급약', n('med'), 0, 1],
+    ['🧣', '담요', n('blanket'), 0, 1],
+    ['🍶', '술', n('liquor'), 0, 1],
+    ['🪚', '판자', n('boards'), 0, 1],
+    ['🧴', '윤활유', n('oil'), 0, 1],
+    ['🔩', '수리 부품', n('parts'), 0, 1],
+  ];
+  let out = 0;
+  const html = rows.map(([ic, name, v, o, l, unit]) => { const cls = v <= o ? 'out' : v <= l ? 'low' : ''; if (cls === 'out') out++; return `<div class="sk ${cls}"><span class="ic">${ic}</span><b>${cls === 'out' && !unit ? '없음' : v + (unit || '')}</b><small>${name}</small></div>`; }).join('');
+  if (html !== stockHTML) { stockHTML = html; box.innerHTML = html; }
+  set('기차 안 물자', out ? `<span style="color:var(--bad)">떨어진 것 ${out}개</span>` : '<span style="color:var(--good)">넉넉해요</span>');
 }
 
 /* ======================================================
@@ -7991,7 +8102,10 @@ function modTask() {
 }
 function heatBonus() { const m = mod('heat'); return nearFire() ? (m === 'focus' ? 46 : m === 'spread' ? 28 : 36) : (m === 'focus' ? 10 : m === 'spread' ? 26 : 18); }
 function windowWarm() { const m = mod('window'); return m === 'insulate' ? 5 : m === 'light' ? -2 : 0; }
-function gardenGrowK() { const g = mod('garden'); return (g === 'fast' ? 1.5 : g === 'eco' ? .9 : 1) * (mod('window') === 'light' ? 1.2 : 1) * (S.shutters ? .25 : 1); }   // (no sun through closed shutters)
+function gardenGrowK() {   // (no sun through closed shutters; a cold greenhouse barely grows, a warm one grows faster)
+  const g = mod('garden'), fi = CARS.findIndex(c => c.kind === 'farm'), ft = carTempCache && fi >= 0 && carTempCache[fi] ? carTempCache[fi].t : 12;
+  return (g === 'fast' ? 1.5 : g === 'eco' ? .9 : 1) * (mod('window') === 'light' ? 1.2 : 1) * (S.shutters ? .25 : 1) * (ft < 4 ? .3 : ft > 16 ? 1.25 : 1);
+}
 function gardenWaterK() { const g = mod('garden'); return g === 'fast' ? 1.5 : g === 'eco' ? .5 : 1; }
 function buildModsUI() {
   if ($('mods')) return;
@@ -8243,8 +8357,9 @@ function carTemps() {
   ensureWear();
   const pipe = (running ? 1 : pw) * clamp(S.steam / 60, 0, 1) * (.45 + S.wear.pipes / 180) * (crisis && crisis.kind === 'pipe' && !crisis.shut ? .4 : 1) * (S.heatOff ? .15 : 1);   // heating switched off from the driver's stand
   const hm = mod('heat'), insul = (mod('window') === 'insulate' ? 3 : mod('window') === 'light' ? -1 : 0) + (S.shutters ? 3 : 0) - (S.airOpen ? 3 : 0), frz = (S.freeze || 0) * 14, broken = Math.min(6, (S.boarded || []).length * 1.2);
-  return CARS.map(c => {
-    let tC = out + 14 * pipe + insul - frz - (c.kind === 'living' ? 0 : broken * .3);
+  const HL = carHeatLv();
+  return CARS.map((c, ci) => {
+    let tC = out + 14 * pipe * HEAT_F[HL[ci]] + insul - frz - (c.kind === 'living' ? 0 : broken * .3);   // (each car's own heating setting)
     if (c.kind === 'living') tC += (S.fire / 100) * (hm === 'focus' ? 16 : hm === 'spread' ? 7 : 11);
     else if (hm === 'spread') tC += (S.fire / 100) * 4;
     if (c.kind === 'farm') tC += cur.sun * daylight(S.hour) * 6;
@@ -8253,10 +8368,11 @@ function carTemps() {
     if (c.kind === 'salon') tC -= 3;
     if (c.kind === 'lab') tC += 2;
     if (c.kind === 'utility') tC += 1 + ((S.heater && S.heater.temp) || 0) / 100 * 9;   // the water heater warms the whole car
+    if (c.kind === 'works') tC += worksHeat();                                           // a lit kiln or boiling pot warms the production car
     return { kind: c.kind, t: Math.round(tC) };
   });
 }
-const CAR_KO = { living: '생활 칸', galley: '주방·작업 칸', farm: '온실 칸', store: '창고 칸', salon: '특실', lab: '실험실', utility: '설비칸' };
+const CAR_KO = { living: '생활 칸', galley: '주방·작업 칸', farm: '온실 칸', store: '창고 칸', salon: '특실', lab: '실험실', utility: '설비칸', works: '생산 칸' };
 function buildTrainStatusUI() {
   if ($('tstat')) return;
   const sec = secOf('기차 상태'); if (!sec) return;
@@ -8265,7 +8381,7 @@ function buildTrainStatusUI() {
 }
 function tempColor(v) { return v < 0 ? '#7ab8ff' : v < 8 ? '#9ac8e8' : v < 16 ? '#c8d4b0' : v < 24 ? 'var(--good)' : 'var(--warn)'; }
 // everything wrong with the train right now, worst first: [severity 2 danger / 1 warning / 0 note, icon, text, car index or null, 'loco' | 'tender' | 'wheels' | null]
-const CAR_SHORT = { living: '생활', galley: '주방', farm: '온실', store: '창고', salon: '특실', lab: '실험', utility: '설비' };
+const CAR_SHORT = { living: '생활', galley: '주방', farm: '온실', store: '창고', salon: '특실', lab: '실험', utility: '설비', works: '생산' };
 const LOCO_CRISES = new Set(['pressure', 'grate', 'frozencoal', 'injector', 'lights', 'slip', 'runaway', 'overspeed']);
 function trainProblems() {
   const P = [], mm = s => `${Math.floor(Math.max(0, s) / 60)}:${String(Math.floor(Math.max(0, s) % 60)).padStart(2, '0')}`;
@@ -8564,6 +8680,392 @@ function equipmentTask() {
 CAR_LIFE.push(
   ['utility', () => task('마른 수건을 개는 중', [step({ u: U(UX(420)), v: .42, anim: 'sort', dur: 8, face: 1, label: '마른 수건을 개어 선반에 올리는 중' })])],
   ['utility', () => task('샤워실 타일을 닦는 중', [step({ u: U(UX(150)), v: .32, anim: 'sort', dur: 9, face: 1, hold: 'rag', label: '샤워실 타일의 물때를 닦는 중', done() { woman.hold = null; } })])]);
+
+/* ======================================================
+   HER TIME OFF — you can suggest how she spends a quiet moment. She finishes what she's doing first,
+   and takes it as her own idea ("…잠깐 쉬자"). Each one does her a different kind of good.
+   ====================================================== */
+const DECK_SPOT = { u: U(60), v: .42 }, BENCH_SPOT = { u: U(78), v: .3 };   // the rear platform, at the rail (and leaning back against the car wall)
+const LEISURE = {
+  drink:  { ic: '🍶', name: '술 한잔', tip: '술을 한잔해요. 마음이 풀리고 몸이 데워지지만, 체력이 조금 줄어요', why: () => (S.stash.liquor || 0) <= 0 ? '술 없음' : null,
+    line: ['…오늘은 한 잔 해도 되겠지.', '수고했어, 나. 한 잔만.', '건배— 아무도 없지만.'], make: () => leisureDrink() },
+  read:   { ic: '📖', name: '책 읽기', tip: '난롯가에서 책을 읽어요. 마음이 차분해져요', line: ['…잠깐 책이나 볼까.', '어디까지 읽었더라.', '오늘은 책 속으로 도망가자.'],
+    make: () => task('난롯가에서 책을 읽는 중', [step({ u: U(940), v: .45, anim: 'look', dur: 3, face: 1, label: '책장에서 책을 고르는 중' }), step({ ...STAND.seat, anim: 'look', dur: 18, face: -1, hold: 'notebook', label: '난롯가에서 책을 읽는 중', say: () => pick(['…이 사람도 기차를 탔었네.', '…좋은 문장이다.', '이야기 속은 따뜻하구나.']), sayDur: 3.4, done() { woman.hold = null; } })]) },
+  tail:   { ic: '🌅', name: '지나온 길 보기', tip: '맨 뒤 데크에 나가 멀어지는 선로를 바라봐요. 지나온 시간을 정리하며 마음의 상처가 조금 아물어요',
+    line: ['…맨 뒤에 가서 바람 좀 쐬자.', '…뒤를 좀 보고 싶어.', '잠깐 나갔다 올게, 기차야.'], make: () => tailViewTask() },
+  tea:    { ic: '🍵', name: '차 한잔', tip: '주방에서 차를 끓여 마셔요. 몸이 데워지고 피로가 풀려요', line: ['…따뜻한 차가 마시고 싶다.', '물이나 올려 볼까.'],
+    make: () => task('찻물을 끓이는 중', [step({ ...STAND.kitchen, anim: 'stir', dur: 6, face: -1, label: '주전자에 물을 올리는 중', tick(dt) { if (Math.random() < dt * 4) parts.push({ k: 'steam', x: 1290, y: CAR.floorB - 110, vx: rand(-4, 4), vy: -rand(14, 26), life: 1.2, r: rand(2, 4) }); } }), step({ ...STAND.table, anim: 'drink', dur: 9, face: 1, hold: 'cup', label: '따뜻한 차를 홀짝이는 중', say: () => pick(['…후, 따뜻하다.', '차 맛이 좋네, 오늘은.']), done() { woman.hold = null; S.warmth = Math.min(100, S.warmth + 8); } })]) },
+  knit:   { ic: '🧶', name: '뜨개질', tip: '털실로 목도리를 떠요. 손이 바쁘면 생각이 가라앉아요', line: ['…뜨다 만 목도리나 마저 뜰까.', '손 좀 움직여야겠다.'],
+    make: () => task('털실로 목도리를 뜨는 중', [step({ u: U(820), v: .5, anim: 'crouch', dur: 1.6, face: 1, label: '털실 바구니를 집는 중' }), step({ ...STAND.seat, anim: 'tie', dur: 16, face: -1, label: '털실로 목도리를 뜨는 중', say: () => pick(['한 코, 두 코…', '…이번엔 길게 떠야지.']) })]) },
+  sketch: { ic: '✏️', name: '풍경 그리기', tip: '창밖 풍경을 바라보다 공책에 그려요. 그림은 생활 칸 창가에 붙어요', why: () => isNight() ? '밤엔 안 보여요' : null,
+    line: ['…오늘 본 걸 그려 둘까.', '잊어버리기 전에 그려 두자.'], make: () => sketchTask() },
+  record: { ic: '🎶', name: '축음기 듣기', tip: '특실의 낡은 축음기를 틀어요. 외로움이 조금 덜해져요', line: ['…축음기나 틀어 볼까.', '오늘은 조금 사치 부리자.'],
+    make: () => task('축음기를 틀어 듣는 중', [step({ u: U(CARS[4].x0 + 790), v: .45, anim: 'turnWheel', dur: 2.6, face: 1, label: '축음기 태엽을 감는 중' }), step({ u: U(CARS[4].x0 + 740), v: .45, anim: 'listen', dur: 18, face: 1, label: '지직거리는 음악을 듣는 중', tick(dt) { if (Math.random() < dt * 1.5) parts.push({ k: 'note', x: CARS[4].x0 + 790, y: CAR.floorB - 110, vx: -rand(6, 16), vy: -14, life: 2 }); }, say: () => pick(['…지직거려도 좋다.', '누가 이 판을 아꼈을까.']) })]) },
+  piano:  { ic: '🎹', name: '피아노', tip: '특실의 피아노를 쳐요. 칠수록 조금씩 늘어요', line: ['…피아노 좀 쳐 볼까.', '오늘은 끝까지 쳐 보자.'], make: () => pianoTask() },
+  nap:    { ic: '💤', name: '낮잠', tip: '난롯가에서 꾸벅꾸벅 졸아요. 쌓인 피로가 풀려요', why: () => isNight() ? '밤엔 그냥 자요' : null, line: ['…조금만 눈 붙일까.', '하암… 잠깐만.'], make: () => dozeTask() },
+  stars:  { ic: '⭐', name: '별 보기', tip: '맨 뒤 데크에서 밤하늘을 올려다봐요. 맑은 밤에만 할 수 있어요', why: () => !(S.hour >= 19 || S.hour < 5) ? '밤에만' : WEATHER[S.weather].rain > .1 ? '하늘이 흐려요' : null,
+    line: ['…별 보러 나가 볼까.', '오늘은 하늘이 맑네.'], make: () => starTask() },
+};
+const LEISURE_FX = { drink: [6, 10], read: [5, 14], tail: [7, 12], tea: [3, 16], knit: [4, 14], sketch: [5, 10], record: [6, 10], piano: [4, 8], nap: [2, 24], stars: [7, 10] };   // [hope, strain relief]
+const TAIL_LINES = ['…저 멀리, 우리가 지나온 길.', '…저기 어딘가에 내가 살던 동네가 있었겠지.', '선로가 점점 작아져. 시간도 저렇게 멀어지는 걸까.', '…많이 왔다, 우리.', '지나온 건 다 저 뒤에 두고 가는 거야.', '…이렇게 보면, 버텨 온 날들이 길게 이어져 있네.'];
+const TAIL_LINES2 = ['…그래도, 여기까지 왔어.', '바람이 차다. 그래도 좋다.', '…엄마, 나 아직 잘 버티고 있어.', '뒤돌아보는 건 오늘까지만. 내일은 앞을 보자.', '…고마워, 기차야. 여기까지 데려와 줘서.'];
+function tailViewTask() {
+  return task('맨 뒤에서 지나온 길을 바라보는 중', [
+    step({ ...DECK_SPOT, anim: 'stand', dur: .4, face: -1, label: '맨 뒤 데크로 나가는 중' }),
+    step({ ...DECK_SPOT, anim: 'look', dur: 10, face: -1, label: '멀어지는 선로를 바라보는 중', say: () => pick(TAIL_LINES), sayDur: 4 }),
+    step({ ...BENCH_SPOT, anim: 'hug', dur: 12, face: -1, label: '난간에 기대 지나온 시간을 떠올리는 중', say: () => stage() < 3 ? pick(TAIL_LINES2) : '…', sayDur: 4, done() { addScar(-.6); diaryNote('tailview'); } }),
+  ]);
+}
+function starTask() {
+  return task('맨 뒤에서 별을 보는 중', [
+    step({ ...DECK_SPOT, anim: 'stand', dur: .4, face: -1, label: '맨 뒤 데크로 나가는 중' }),
+    step({ ...DECK_SPOT, anim: 'lookup', dur: 14, face: -1, label: '밤하늘의 별을 올려다보는 중', say: () => pick(['…별이 보여. 아직 이렇게 많구나.', '저 별들은 다 알고 있겠지, 무슨 일이 있었는지.', '…저 중에 하나쯤은 누가 보고 있을까.']), sayDur: 4 }),
+    step({ ...BENCH_SPOT, anim: 'look', dur: 8, face: -1, label: '난간에 기대 별을 세는 중', done() { diaryNote('stars'); } }),
+  ]);
+}
+function leisureDrink() {
+  return task('술을 한잔하는 중', [
+    step({ ...STAND.stash, anim: 'crouch', dur: 1.3, face: 1, label: '병을 꺼내는 중', ev: [[.6, () => { if (S.stash.liquor > 0) { S.stash.liquor--; woman.hold = 'liquor'; } }]] }),
+    step({ ...STAND.seat, anim: 'drink', dur: 5, face: -1, label: '홀짝이는 중' }),
+    step({ anim: 'warm', dur: 6, face: -1, label: '병을 쥐고 멍하니 있는 중', say: () => pick(stage() < 2 ? ['…쓰다. 그래도 따뜻해.', '옛날엔 이런 거 친구들이랑 마셨는데.', '취하니까 기차 소리가 노래 같네.'] : ['…다들 보고 싶어.', '…오늘만이야.']), sayDur: 4,
+      done() { woman.hold = null; S.warmth = Math.min(100, S.warmth + 8); S.health = Math.max(0, S.health - 2); S.tipsy = 1; S.drankDay = S.day; log('🍶 술을 한잔했다'); } }),
+  ]);
+}
+const leisureCool = {};
+function suggestLeisure(k) {
+  const L = LEISURE[k]; if (!L || !running || S.dead || ending || (L.why && L.why()) || (leisureCool[k] || 0) > t) return;
+  S.leisureReq = { k, at: t }; log(`🪑 ${L.name} — 그녀에게 쉬는 시간을 권했다`); updateLeisureUI();
+}
+function leisureTick() {
+  const R = S.leisureReq; if (!R) return;
+  const L = LEISURE[R.k];
+  if (!L || (L.why && L.why()) || t - R.at > 300) { S.leisureReq = null; updateLeisureUI(); return; }   // it stopped making sense, or it's been too long
+  if (crisis || !awake() || woman.anim === 'sleep' || S.dead || ending) return;
+  const tk = woman.task; if (tk && (taskPri(tk) >= 1.5 || tk.leisure || tk.carries)) return;   // she finishes real work first
+  S.leisureReq = null;
+  const body = L.make(); if (!body) { updateLeisureUI(); return; }
+  const fx = LEISURE_FX[R.k] || [4, 10];
+  body.steps.unshift(step({ anim: 'look', dur: 1.4, face: woman.facing, oc: true, label: '…잠깐 쉬기로 하는 중', say: stage() < 3 ? pick(L.line) : '…', sayDur: 3 }));
+  const last = body.steps[body.steps.length - 1], prevDone = last.done;
+  last.done = function () { if (prevDone) prevDone.call(this); S.hope = Math.min(hopeCap(), S.hope + fx[0]); S.strain = Math.max(0, (S.strain || 0) - fx[1]); heal(.5, 'leisure'); leisureCool[R.k] = t + 150; diaryNote('leisure'); updateLeisureUI(); };
+  body.leisure = true; body.pri = 1.1; body.idle = false;
+  releaseHold(); woman.resume = null; woman.task = body;
+}
+function buildLeisureSection(panel) {
+  const sec = document.createElement('div'); sec.className = 'sec';
+  sec.innerHTML = '<h3>그녀의 쉬는 시간 <em>권하면 쉬어요</em></h3><div class="devs" id="leis">'
+    + Object.keys(LEISURE).map(k => `<button data-lz="${k}" title="${LEISURE[k].tip}"><span class="ic">${LEISURE[k].ic}</span><b>${LEISURE[k].name}</b><small id="lz-${k}"></small></button>`).join('') + '</div>';
+  panel.appendChild(sec);
+  sec.addEventListener('click', e => { const b = e.target.closest('button[data-lz]'); if (b && !b.disabled) suggestLeisure(b.dataset.lz); });
+}
+function updateLeisureUI() {
+  const R = S.leisureReq, doing = woman.task && woman.task.leisure;
+  for (const k in LEISURE) {
+    const b = document.querySelector(`#leis button[data-lz="${k}"]`); if (!b) continue;
+    const why = LEISURE[k].why && LEISURE[k].why(), cd = Math.ceil((leisureCool[k] || 0) - t), pend = R && R.k === k;
+    b.disabled = !running || S.dead || !!why || cd > 0 || (!!R && !pend);
+    b.classList.toggle('on', !!pend);
+    $('lz-' + k).textContent = pend ? (crisis ? '위기 뒤에' : doing ? '쉬는 중' : '곧 할게요') : why || (cd > 0 ? `${cd}초` : '');
+  }
+}
+
+/* ======================================================
+   THE TRAIN'S OWN MACHINES — one for each supply. They run on steam or power, take a little from the greenhouse
+   (or fruit, or fuel), and fill a small tray she empties. You switch them; she thinks the train is looking after her.
+   ====================================================== */
+const facCar = k => CARS.find(c => c.kind === FAC[k].car);
+const facX = k => facCar(k).x0 + FAC[k].dx;
+const facOutName = k => FAC[k].out === 'coal' ? '숯' : STASH_INFO[FAC[k].out].name;
+const FAC_NEED_TXT = { G: '온실 부족', fish: '열매 부족', fuel: '연료 부족' };
+const FAC_LINES = {
+  water: '맑은 물이다. 눈이 물이 됐네.', food: '통조림이 따끈해. 기차가 끓여 줬구나.', fish: '잘 익었다. 온실아, 고마워.', med: '쓴 냄새… 그래도 약이야.',
+  liquor: '…오늘 밤엔 한 잔 해도 되겠다.', fuel: '연료 벽돌. 난로가 좋아하겠다.', coal: '숯이 됐네. 기관차 밥이야.', blanket: '포근해… 기차가 짜 준 담요.',
+  boards: '판자다. 창문 막을 때 써야지.', oil: '기름이다. 바퀴가 덜 아프겠지.', parts: '부품 하나… 이게 얼마나 귀한데.',
+};
+const FAC_LINES_ANY = ['…기차가 또 만들어 놨네.', '고마워, 기차야. 덕분에 버틴다.', '이 기계, 누가 켜 둔 걸까. …기차겠지.', '혼자서도 일하는구나, 이 기차.', '조금씩, 조금씩 쌓이네.'];
+const FAC_ON_LINES = ['…기계가 돌기 시작했어. 기차가 뭘 만드나 봐.', '덜컹덜컹… 저 소리, 나쁘지 않네.', '기차야, 너도 바쁘구나.', '…누가 켰지? 아, 기차구나.'];
+let facLastCollect = -999;
+function facState() {
+  if (!S.fac) S.fac = {};
+  for (const k in FAC) if (!S.fac[k]) S.fac[k] = { on: FAC[k].def !== false, p: 0, run: false, ready: 0 };
+  return S.fac;
+}
+function gardenOk(min) { return S.projects.garden === 'done' && S.garden.G >= min && (S.plantDead || 0) < .5; }
+function facFull(k) {   // the store already holds plenty of what it makes
+  const f = FAC[k], s = S.fac[k], add = (s.ready || 0) * f.qty;
+  return f.out === 'coal' ? S.coal + add >= f.cap : (S.stash[f.out] || 0) + add >= f.cap;
+}
+function facNeedMissing(k) {
+  const need = FAC[k].need; if (!need) return null;
+  for (const n in need) { const req = need[n][0]; if (n === 'G' ? !gardenOk(req) : (S.stash[n] || 0) < req) return n; }
+  return null;
+}
+function facTake(k) {
+  const need = FAC[k].need; if (!need) return;
+  for (const n in need) { const use = need[n][1]; if (!use) continue; if (n === 'G') S.garden.G = Math.max(0, S.garden.G - use); else S.stash[n] = Math.max(0, (S.stash[n] || 0) - use); }
+}
+function facWhy(k) {    // '' while it runs; otherwise why it is waiting
+  const f = FAC[k], s = S.fac[k];
+  if (!s.on) return 'off';
+  if (s.ready >= 2) return 'ready';
+  if (!s.run) { if (facFull(k)) return 'full'; const n = facNeedMissing(k); if (n) return 'need:' + n; }
+  if (f.use === 'steam' && S.steam < 15) return 'steam';
+  if (f.use === 'power' && (S.power === undefined ? 100 : S.power) < 15) return 'power';
+  return '';
+}
+function facTick(dt) {
+  if (!running || S.dead || ending) return;
+  const F = facState(), rate = dt * gameRate() * PACE();
+  let steamUse = 0, powerUse = 0;
+  for (const k in FAC) {
+    const f = FAC[k], s = F[k];
+    s.why = facWhy(k); if (s.why) continue;
+    if (!s.run) { facTake(k); s.run = true; }   // a new batch takes its materials up front
+    let r = rate / f.hrs;
+    if (k === 'water') r *= WEATHER[S.weather].rain > 0 || outsideTemp() < 2 ? 1.4 : .7;   // more snow and rain on the roof, more water
+    if (k === 'fruit') r *= .6 + .4 * cur.sun;
+    s.p += r;
+    if (f.use === 'steam') steamUse++; else if (f.use === 'power') powerUse++;
+    if (s.p >= 1) { s.p = 0; s.run = false; s.ready++; }
+  }
+  if (steamUse) S.steam = Math.max(0, S.steam - dt * .003 * steamUse);   // the boiler feels it: more coal
+  if (powerUse) S.power = Math.max(0, (S.power === undefined ? 100 : S.power) - dt * .04 * powerUse);
+}
+function worksHeat() {
+  if (!S.fac) return 0;
+  const on = k => S.fac[k] && S.fac[k].on && !S.fac[k].why;
+  return (on('kiln') ? 5 : 0) + (on('still') ? 1 : 0) + (on('water') ? .5 : 0);
+}
+function facCollect(k, quiet) {
+  const f = FAC[k], s = S.fac[k]; if (!s || !s.ready) return;
+  const n = s.ready * f.qty; s.ready = 0;
+  if (f.out === 'coal') S.coal = Math.min(100, S.coal + n); else S.stash[f.out] = (S.stash[f.out] || 0) + n;
+  S.stats.made = (S.stats.made || 0) + 1;
+  if (quiet) return;
+  const it = f.out === 'coal' ? { ic: '⚫' } : STASH_INFO[f.out];
+  log(f.out === 'coal' ? `${it.ic} ${f.name}에서 숯을 꺼내 석탄 칸에 부었다` : `${it.ic} ${f.name}에서 ${facOutName(k)} ${n}개를 꺼냈다`);
+  if (awake() && stage() < 3 && Math.random() < .5) say(Math.random() < .55 ? FAC_LINES[f.out] : pick(FAC_LINES_ANY), 3.4);
+}
+// she empties the trays: the machine in the car she's in, or one whose tray is full / whose supply is running low
+function facCollectTask() {
+  if (isNight() || crisis || t - facLastCollect < 60) return null;
+  const F = facState(), hx = herX();
+  const ready = Object.keys(FAC).filter(k => F[k].ready > 0); if (!ready.length) return null;
+  const urgent = k => F[k].ready >= 2 || (FAC[k].out === 'coal' ? S.coal < 30 : (S.stash[FAC[k].out] || 0) <= 1);
+  const first = ready.find(k => Math.abs(facX(k) - hx) < 700) || ready.find(urgent); if (!first) return null;
+  facLastCollect = t;
+  const ks = ready.filter(k => FAC[k].car === FAC[first].car).sort((a, b) => facX(a) - facX(b)), steps = [];
+  for (const k of ks) {
+    const f = FAC[k], u = U(facX(k));
+    steps.push(step({ u, v: .44, anim: 'crouch', dur: 1.1, face: 1, label: `${eul(f.name)} 들여다보는 중` }));
+    steps.push(step({ u, v: .44, anim: 'sort', dur: 1.7, face: 1, label: `${eul(facOutName(k))} 꺼내 정리하는 중`, done() { facCollect(k); } }));
+  }
+  return task('기계가 만든 것을 꺼내는 중', steps);
+}
+function facCatchUp(H) {   // while you were away: the machines ran, and she emptied the trays as she went
+  const F = facState(); let made = 0;
+  for (const k in FAC) {
+    const f = FAC[k], s = F[k]; if (!s.on) continue;
+    if (s.ready) { facCollect(k, true); made++; }
+    const P = s.p + H * PACE() / f.hrs, n = Math.min(4, Math.floor(P)); s.p = n >= 4 ? 0 : P - n;
+    for (let i = 0; i < n; i++) {
+      if (!s.run) { if (facFull(k) || facNeedMissing(k)) { s.p = 0; break; } facTake(k); }
+      s.run = false; s.ready = 1; facCollect(k, true); made++;
+    }
+  }
+  return made;
+}
+function facToggle(k) {
+  if (!running || S.dead) return;
+  const s = facState()[k]; s.on = !s.on; s.why = facWhy(k);
+  if (s.on && CARS.indexOf(facCar(k)) === herCarIdx()) queueNotice('machine', rand(3, 6), { grp: 'machine', cd: 45, p: .7, check: () => S.fac[k].on, line: () => stage() < 3 ? pick(FAC_ON_LINES) : null });
+  updateFacUI(); save();
+}
+function buildFacSection(panel) {
+  const sec = document.createElement('div'); sec.className = 'sec';
+  sec.innerHTML = '<h3>생산 시설 <em></em></h3><div id="facs">' + Object.keys(FAC).map(k => `<button data-fac="${k}" title="${FAC[k].name} (${CAR_KO[FAC[k].car]}) — ${FAC[k].tip}"><span class="ic">${FAC[k].ic}</span><b>${FAC[k].short}</b><small id="fs-${k}"></small><i><u id="fp-${k}"></u></i></button>`).join('') + '</div>';
+  panel.appendChild(sec);
+  sec.addEventListener('click', e => { const b = e.target.closest('button[data-fac]'); if (b) facToggle(b.dataset.fac); });
+}
+function updateFacUI() {
+  if (!$('facs')) return;
+  const F = facState(); let on = 0, waiting = 0;
+  for (const k in FAC) {
+    const s = F[k], why = s.why === undefined ? facWhy(k) : s.why, b = document.querySelector(`#facs button[data-fac="${k}"]`); if (!b) continue;
+    const txt = why === 'off' ? '꺼짐' : why === 'ready' ? '다 됐어요' : why === 'full' ? '창고 가득' : why === 'steam' ? '증기 부족' : why === 'power' ? '전기 부족'
+      : why.startsWith('need:') ? FAC_NEED_TXT[why.slice(5)] || '재료 부족' : `만드는 중 ${Math.floor(s.p * 100)}%`;
+    if (s.on) on++; if (s.ready) waiting++;
+    b.className = why === 'off' ? 'off' : why === 'ready' || s.ready ? 'done' : why ? 'wait' : 'run';
+    const fs = $('fs-' + k); if (fs.textContent !== txt) fs.textContent = txt;
+    $('fp-' + k).style.width = Math.round((why === 'ready' ? 1 : s.p) * 100) + '%';
+  }
+  const sec = $('facs').closest('.sec'), em = sec && sec.querySelector('h3 em');
+  if (em) em.innerHTML = `켜진 기계 ${on}/${Object.keys(FAC).length}` + (waiting ? ` · <span style="color:var(--good)">꺼낼 것 ${waiting}</span>` : '');
+}
+
+/* ---- NO.01 works: the production car ---- */
+function worksDecor(g, car, gaps, r) {
+  const { x0, x1 } = car, fb = CAR.floorB, X = k => x0 + FAC[k].dx;
+  g.fillStyle = 'rgba(40,36,30,.3)'; for (let i = 0; i < 9; i++) { g.beginPath(); g.ellipse(lerp(x0 + 40, x1 - 40, r()), lerp(fb + 10, CAR.floorF - 8, r()), lerp(10, 26, r()), lerp(3, 6, r()), 0, 0, 7); g.fill(); }   // oil stains
+  // a line shaft along the ceiling: belts drop from it to the machines that turn
+  g.fillStyle = '#4a4f53'; g.fillRect(x0 + 290, CAR.ceil + 48, x1 - x0 - 320, 6); g.fillStyle = 'rgba(255,255,255,.12)'; g.fillRect(x0 + 290, CAR.ceil + 48, x1 - x0 - 320, 1.4);
+  for (let x = x0 + 300; x < x1 - 30; x += 130) { g.fillStyle = '#34383c'; g.fillRect(x, CAR.ceil + 38, 6, 16); }
+  // 💧 the snow-melt water machine: a riveted tank fed from the roof hopper, a tap, a bottle shelf
+  { const cx = X('water'), top = fb - 150, w = 54;
+    g.strokeStyle = '#5a6a72'; g.lineWidth = 6; g.beginPath(); g.moveTo(cx, top); g.lineTo(cx, CAR.ceil + 28); g.stroke();
+    g.fillStyle = '#2a2e30'; g.fillRect(cx - w / 2 + 4, fb - 30, 5, 30); g.fillRect(cx + w / 2 - 9, fb - 30, 5, 30);
+    const tg = g.createLinearGradient(cx - w / 2, 0, cx + w / 2, 0); tg.addColorStop(0, '#53656e'); tg.addColorStop(.45, '#8aa0aa'); tg.addColorStop(1, '#45555c');
+    g.fillStyle = tg; rrect(g, cx - w / 2, top, w, 122, 10); g.fill();
+    g.fillStyle = 'rgba(0,0,0,.25)'; for (const yy of [top + 20, top + 100]) g.fillRect(cx - w / 2, yy, w, 3);
+    rivets(g, cx - w / 2 + 5, cx + w / 2 - 5, top + 21.5, 8, 1);
+    g.fillStyle = '#1e2224'; g.fillRect(cx + 12, top + 28, 7, 66);
+    g.fillStyle = '#e8e2cc'; g.font = 'bold 9px "Malgun Gothic", sans-serif'; g.fillText('정수', cx - 21, top + 50);
+    g.fillStyle = '#9aa0a4'; g.fillRect(cx - 6, fb - 34, 14, 4); g.fillRect(cx + 3, fb - 32, 4, 7);
+    g.fillStyle = '#6b4a2e'; g.fillRect(cx - 32, fb - 12, 64, 4); g.fillRect(cx - 30, fb - 8, 3, 8); g.fillRect(cx + 27, fb - 8, 3, 8); }
+  // 🍶 the still: a copper pot over a little burner, a swan neck into the cooling barrel
+  { const cx = X('still');
+    g.fillStyle = '#2a2c2e'; g.fillRect(cx - 26, fb - 30, 52, 30); g.fillStyle = '#141210'; g.fillRect(cx - 14, fb - 25, 28, 14);
+    g.fillStyle = '#b8743a'; g.beginPath(); g.ellipse(cx, fb - 52, 26, 22, 0, 0, Math.PI * 2); g.fill();
+    g.fillStyle = 'rgba(255,220,160,.28)'; g.beginPath(); g.ellipse(cx - 9, fb - 60, 6, 10, -.3, 0, 7); g.fill();
+    g.fillStyle = '#9a5e2a'; g.fillRect(cx - 6, fb - 82, 12, 10);
+    g.strokeStyle = '#b8743a'; g.lineWidth = 4; g.beginPath(); g.moveTo(cx, fb - 82); g.quadraticCurveTo(cx + 22, fb - 104, cx + 44, fb - 88); g.stroke();
+    g.fillStyle = '#6b4a2e'; rrect(g, cx + 34, fb - 90, 22, 48, 4); g.fill(); g.strokeStyle = '#c8844a'; g.lineWidth = 1.5; for (let k = 0; k < 4; k++) { g.beginPath(); g.ellipse(cx + 45, fb - 81 + k * 10, 8, 2.2, 0, 0, 7); g.stroke(); }
+    g.fillStyle = '#9aa0a4'; g.fillRect(cx + 54, fb - 46, 9, 3); }
+  // 🪵 the fuel-brick press: an iron frame, a screw, a mould box
+  { const cx = X('press');
+    g.fillStyle = '#3a3e42'; g.fillRect(cx - 30, fb - 118, 8, 118); g.fillRect(cx + 22, fb - 118, 8, 118); g.fillRect(cx - 34, fb - 122, 68, 10);
+    g.fillStyle = '#4a4f53'; g.fillRect(cx - 24, fb - 40, 48, 26); g.fillStyle = '#2a2e30'; g.fillRect(cx - 20, fb - 36, 40, 18);
+    g.fillStyle = '#5a5f63'; g.fillRect(cx - 34, fb - 14, 68, 14); g.fillStyle = '#e8e2cc'; g.font = 'bold 8px "Malgun Gothic", sans-serif'; g.fillText('연료', cx - 9, fb - 4); }
+  // ⚫ the charcoal kiln: a brick dome with an iron door, its flue up through the roof
+  { const cx = X('kiln'), w = 92, h = 88;
+    g.strokeStyle = '#3a3630'; g.lineWidth = 9; g.beginPath(); g.moveTo(cx + 24, fb - h + 8); g.lineTo(cx + 24, CAR.ceil + 26); g.stroke();
+    g.save(); g.beginPath(); g.moveTo(cx - w / 2, fb); g.lineTo(cx - w / 2, fb - h * .45); g.quadraticCurveTo(cx - w / 2, fb - h, cx, fb - h); g.quadraticCurveTo(cx + w / 2, fb - h, cx + w / 2, fb - h * .45); g.lineTo(cx + w / 2, fb); g.closePath();
+    g.fillStyle = '#8a4a34'; g.fill(); g.clip();
+    g.strokeStyle = 'rgba(40,20,14,.45)'; g.lineWidth = 1; for (let y = fb - 8, row = 0; y > fb - h; y -= 9, row++) { g.beginPath(); g.moveTo(cx - w / 2, y); g.lineTo(cx + w / 2, y); g.stroke(); for (let x = cx - w / 2 + (row % 2) * 9; x < cx + w / 2; x += 18) { g.beginPath(); g.moveTo(x, y); g.lineTo(x, y - 9); g.stroke(); } }
+    g.fillStyle = 'rgba(255,255,255,.08)'; g.beginPath(); g.ellipse(cx - 18, fb - h * .7, 14, 22, -.4, 0, 7); g.fill(); g.restore();
+    g.fillStyle = '#1a1210'; rrect(g, cx - 18, fb - 42, 36, 30, 4); g.fill();
+    g.fillStyle = '#5a5f63'; g.fillRect(cx - 20, fb - 45, 40, 4); g.fillRect(cx + 12, fb - 30, 8, 3);
+    g.fillStyle = '#2a2420'; g.fillRect(cx - w / 2 - 4, fb - 6, w + 8, 6); }
+  // 🧣 the loom: posts and beams, warp threads, a roll of cloth
+  { const cx = X('loom'), l = cx - 44, rt = cx + 44, top = fb - 112;
+    g.fillStyle = '#7a5434'; g.fillRect(l, top, 7, 112); g.fillRect(rt - 7, top, 7, 112); g.fillRect(l, top, 88, 7); g.fillRect(l, fb - 50, 88, 6);
+    g.strokeStyle = 'rgba(230,220,200,.7)'; g.lineWidth = .8; for (let x = l + 11; x < rt - 9; x += 4) { g.beginPath(); g.moveTo(x, top + 8); g.lineTo(x, fb - 50); g.stroke(); }
+    g.fillStyle = '#8a4a3e'; g.fillRect(l + 7, fb - 44, 74, 12); g.fillStyle = 'rgba(255,255,255,.14)'; for (let k = 0; k < 5; k++) g.fillRect(l + 7, fb - 43 + k * 2.4, 74, .8);
+    g.fillStyle = '#5e3f26'; g.fillRect(l + 4, fb - 8, 80, 8); }
+  // 🪚 the saw bench: a table, a motor under it, a belt up to the shaft, a plank waiting
+  { const cx = X('saw');
+    g.strokeStyle = '#2a2c2e'; g.lineWidth = 2; g.beginPath(); g.moveTo(cx + 6, fb - 40); g.lineTo(cx + 6, CAR.ceil + 54); g.stroke();
+    g.fillStyle = '#3a3e42'; g.fillRect(cx - 10, fb - 42, 30, 22);
+    g.fillStyle = '#6b4a2e'; g.fillRect(cx - 50, fb - 50, 100, 8); g.fillStyle = '#4a3420'; g.fillRect(cx - 46, fb - 42, 6, 42); g.fillRect(cx + 40, fb - 42, 6, 42); g.fillRect(cx - 46, fb - 14, 92, 4);
+    g.fillStyle = '#b89a6a'; g.fillRect(cx - 48, fb - 56, 36, 6); }
+  // 🧴 the oil press: a small iron frame, a seed basket, a trough with a spout
+  { const cx = X('oil');
+    g.fillStyle = '#3a3e42'; g.fillRect(cx - 26, fb - 96, 6, 96); g.fillRect(cx + 20, fb - 96, 6, 96); g.fillRect(cx - 30, fb - 100, 60, 8);
+    g.fillStyle = '#5a5f63'; g.fillRect(cx - 18, fb - 56, 36, 24); g.fillStyle = '#8a6a3a'; g.fillRect(cx - 14, fb - 52, 28, 16);
+    g.fillStyle = '#4a4f53'; g.fillRect(cx - 24, fb - 32, 48, 8); g.fillStyle = '#9aa0a4'; g.fillRect(cx + 22, fb - 30, 10, 3); }
+  // 🔩 the metal lathe: bed on legs, headstock, tailstock, tool post, a belt; a tray for finished parts
+  { const cx = X('lathe'), l = cx - 55;
+    g.strokeStyle = '#2a2c2e'; g.lineWidth = 2; g.beginPath(); g.moveTo(l + 16, fb - 84); g.lineTo(l + 16, CAR.ceil + 54); g.stroke();
+    g.fillStyle = '#4a5452'; g.fillRect(l + 6, fb - 40, 10, 40); g.fillRect(l + 94, fb - 40, 10, 40);
+    g.fillStyle = '#3a4442'; g.fillRect(l, fb - 50, 110, 12); g.fillStyle = 'rgba(255,255,255,.1)'; g.fillRect(l, fb - 50, 110, 2);
+    g.fillStyle = '#56625e'; g.fillRect(l, fb - 84, 34, 34); g.fillStyle = '#2a3230'; g.fillRect(l + 4, fb - 80, 26, 8);
+    g.fillStyle = '#56625e'; g.fillRect(l + 86, fb - 74, 22, 24); g.fillStyle = '#9aa0a4'; g.fillRect(l + 56, fb - 60, 14, 10);
+    g.fillStyle = '#5e3f26'; g.fillRect(l + 18, fb - 10, 74, 5); }
+  // a tool board and a clock on the piers
+  { const [s0, s1] = gaps[4]; g.fillStyle = '#7a6a4e'; g.fillRect(s0 + 6, CAR.winTop + 6, s1 - s0 - 12, 70); g.strokeStyle = '#3a3e41'; g.lineWidth = 3; for (let k = 0; k < 4; k++) { g.beginPath(); g.moveTo(s0 + 16 + k * 14, CAR.winTop + 14); g.lineTo(s0 + 16 + k * 14, CAR.winTop + 52); g.stroke(); } g.fillStyle = '#5a5f63'; for (let k = 0; k < 4; k++) g.fillRect(s0 + 11 + k * 14, CAR.winTop + 10, 10, 6); }
+  { const [s0, s1] = gaps[2]; const cx = (s0 + s1) / 2, cy = CAR.winTop + 22; g.fillStyle = '#4a4f53'; g.beginPath(); g.arc(cx, cy, 14, 0, 7); g.fill(); g.fillStyle = '#efe6c8'; g.beginPath(); g.arc(cx, cy, 11, 0, 7); g.fill(); g.strokeStyle = '#333'; g.lineWidth = 1.4; g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx, cy - 7); g.moveTo(cx, cy); g.lineTo(cx + 5, cy + 2); g.stroke(); }
+}
+// ---- live parts: lamps, moving parts, what's waiting in each tray
+function drawFacLive() {
+  if (!S.fac) return;
+  const fb = CAR.floorB, F = S.fac, cam = camR.x;
+  const lamp = (x, y, s) => {
+    const why = s.why || '', blink = s.ready > 0 && Math.sin(t * 5) > 0;
+    const col = !s.on ? '#3a3e40' : s.ready > 0 ? (blink ? '#f4f6b0' : '#7ad89a') : why ? '#e0a83a' : '#5fe08a';
+    if (s.on && (!why || s.ready)) { ctx.fillStyle = 'rgba(120,255,160,.18)'; ctx.beginPath(); ctx.arc(x, y, 7, 0, 7); ctx.fill(); }
+    ctx.fillStyle = '#1e2224'; ctx.beginPath(); ctx.arc(x, y, 4.4, 0, 7); ctx.fill(); ctx.fillStyle = col; ctx.beginPath(); ctx.arc(x, y, 3, 0, 7); ctx.fill();
+    if (s.on && !why) { ctx.fillStyle = 'rgba(0,0,0,.45)'; ctx.fillRect(x + 7, y - 1.5, 18, 3); ctx.fillStyle = '#5fe08a'; ctx.fillRect(x + 7, y - 1.5, 18 * s.p, 3); }
+  };
+  const drip = (x, y0, y1, on) => { if (!on) return; const k = (t * 1.3) % 1; ctx.fillStyle = 'rgba(170,210,240,.9)'; ctx.beginPath(); ctx.ellipse(x, lerp(y0, y1, k * k), 1.4, 2.2, 0, 0, 7); ctx.fill(); };
+  const wheel = (x, y, rr, a) => { ctx.strokeStyle = '#5a5f63'; ctx.lineWidth = 2.4; ctx.beginPath(); ctx.arc(x, y, rr, 0, 7); ctx.stroke(); ctx.lineWidth = 1.6; for (let k = 0; k < 4; k++) { const b = a + k * Math.PI / 2; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + Math.cos(b) * rr, y + Math.sin(b) * rr); ctx.stroke(); } ctx.fillStyle = '#3a3e42'; ctx.beginPath(); ctx.arc(x, y, 2.6, 0, 7); ctx.fill(); };
+  for (const k in FAC) {
+    const s = F[k]; if (!s) continue;
+    const car = facCar(k), cx = car.x0 + FAC[k].dx; if (Math.abs(cx - cam) > 1500) continue;
+    const go = s.on && !s.why, rdy = s.ready || 0;
+    switch (k) {
+      case 'water': { const top = fb - 150, lv = .3 + .6 * (go ? s.p : .5);
+        ctx.fillStyle = 'rgba(110,170,220,.85)'; ctx.fillRect(cx + 13, top + 29 + 64 * (1 - lv), 5, 64 * lv);
+        for (let i = 0; i < rdy; i++) bottle(cx - 26 + i * 11, fb - 12, 1);
+        if (go) { bottle(cx + 5, fb - 12, s.p); drip(cx + 5, fb - 25, fb - 22, true); }
+        lamp(cx - 14, top - 8, s); break; }
+      case 'still': {
+        if (go) { const fl = .7 + Math.sin(t * 13) * .2; ctx.fillStyle = `rgba(255,150,60,${fl})`; ctx.beginPath(); ctx.ellipse(cx, fb - 17, 10, 5, 0, 0, 7); ctx.fill(); ctx.fillStyle = `rgba(255,220,120,${fl})`; ctx.beginPath(); ctx.ellipse(cx, fb - 18, 5, 3, 0, 0, 7); ctx.fill(); drip(cx + 61, fb - 42, fb - 20, true); if (Math.random() < .02) parts.push({ k: 'steam', x: cx + rand(-6, 6), y: fb - 84, vx: rand(-4, 4), vy: -rand(10, 20), life: 1.2, r: rand(2, 3) }); }
+        for (let i = 0; i < rdy + (go ? 1 : 0); i++) { const jx = cx + 56 + i * 15; ctx.fillStyle = i < rdy ? '#8a5a2a' : 'rgba(138,90,42,.45)'; rrectC(jx, fb - 19, 12, 19, 4); ctx.fill(); ctx.fillStyle = '#5a3a1a'; ctx.fillRect(jx + 4, fb - 23, 4, 4); }
+        lamp(cx - 20, fb - 40, s); break; }
+      case 'press': { const py = fb - 74 + (go ? (Math.sin(t * 1.4) * .5 + .5) * 30 : 0);
+        ctx.fillStyle = '#7a7e82'; ctx.fillRect(cx - 3, fb - 112, 6, py - fb + 112); ctx.fillStyle = 'rgba(0,0,0,.3)'; for (let y = fb - 110; y < py; y += 5) ctx.fillRect(cx - 3, y, 6, 1.4);
+        ctx.fillStyle = '#5a5f63'; ctx.fillRect(cx - 22, py, 44, 8);
+        wheel(cx, fb - 130, 14, go ? t * 1.4 : .3);
+        for (let i = 0; i < rdy; i++) { ctx.fillStyle = '#6a4a2e'; ctx.fillRect(cx + 36, fb - 7 - i * 8, 18, 7); ctx.fillStyle = 'rgba(0,0,0,.25)'; ctx.fillRect(cx + 36, fb - 1 - i * 8, 18, 1); }
+        lamp(cx - 26, fb - 110 + 0, s); break; }
+      case 'kiln': {
+        if (go) { const fl = .55 + Math.sin(t * 9) * .15 + Math.sin(t * 17) * .08; ctx.fillStyle = `rgba(255,${Math.floor(110 + 40 * fl)},40,${fl})`; rrectC(cx - 15, fb - 39, 30, 24, 3); ctx.fill();
+          ctx.save(); ctx.globalCompositeOperation = 'lighter'; const hg = ctx.createRadialGradient(cx, fb - 28, 4, cx, fb - 28, 70); hg.addColorStop(0, `rgba(255,120,40,${.22 * fl})`); hg.addColorStop(1, 'rgba(255,80,20,0)'); ctx.fillStyle = hg; ctx.fillRect(cx - 70, fb - 98, 140, 100); ctx.restore();
+          if (Math.random() < .05) parts.push({ k: 'smoke', x: cx + 24 + rand(-3, 3), y: CAR.roof - 50, vx: rand(-6, 2), vy: -rand(18, 30), life: 3, r: 6 }); }
+        for (let i = 0; i < rdy; i++) { ctx.fillStyle = '#3a342e'; rrectC(cx + 50 + i * 4, fb - 22 - i * 3, 18, 22, 5); ctx.fill(); ctx.fillStyle = '#1a1816'; ctx.fillRect(cx + 54 + i * 4, fb - 24 - i * 3, 10, 4); }
+        lamp(cx - 6, fb - 96, s); break; }
+      case 'loom': { const l = cx - 44, cloth = go ? s.p : 0, by = fb - 56 - (go ? (Math.sin(t * 3) * .5 + .5) * 18 : 0);
+        if (cloth > 0) { ctx.fillStyle = 'rgba(160,88,74,.85)'; ctx.fillRect(l + 11, fb - 50 - 34 * cloth, 66, 34 * cloth); }
+        ctx.fillStyle = '#6a4a2e'; ctx.fillRect(l + 7, by - 4, 74, 4);
+        if (go) { const sx = cx + Math.sin(t * 1.6) * 30; ctx.fillStyle = '#c8a46a'; ctx.beginPath(); ctx.moveTo(sx - 8, by - 9); ctx.lineTo(sx + 8, by - 9); ctx.lineTo(sx + 5, by - 6); ctx.lineTo(sx - 5, by - 6); ctx.closePath(); ctx.fill(); }
+        for (let i = 0; i < rdy; i++) { ctx.fillStyle = i % 2 ? '#7a5fa0' : '#a0584a'; ctx.fillRect(cx + 48, fb - 7 - i * 7, 22, 6); ctx.fillStyle = 'rgba(255,255,255,.15)'; ctx.fillRect(cx + 48, fb - 7 - i * 7, 22, 1.2); }
+        lamp(cx, fb - 120, s); break; }
+      case 'saw': { const bx = cx + 6, by = fb - 50, a = go ? t * 22 : .4;
+        ctx.save(); ctx.beginPath(); ctx.rect(bx - 20, by - 22, 40, 22); ctx.clip();
+        ctx.fillStyle = '#b8bec2'; ctx.beginPath(); ctx.arc(bx, by, 15, 0, 7); ctx.fill(); ctx.fillStyle = '#8a9094'; for (let i = 0; i < 14; i++) { const b = a + i * Math.PI / 7; ctx.beginPath(); ctx.moveTo(bx + Math.cos(b) * 14, by + Math.sin(b) * 14); ctx.lineTo(bx + Math.cos(b + .12) * 18, by + Math.sin(b + .12) * 18); ctx.lineTo(bx + Math.cos(b + .22) * 14, by + Math.sin(b + .22) * 14); ctx.fill(); }
+        ctx.fillStyle = '#5a5f63'; ctx.beginPath(); ctx.arc(bx, by, 3, 0, 7); ctx.fill(); ctx.restore();
+        if (go && Math.random() < .25) parts.push({ k: 'dust', x: bx - 10, y: by - 4, vx: -rand(30, 80), vy: -rand(10, 40), life: .6, r: 1.4 });
+        for (let i = 0; i < rdy; i++) { ctx.fillStyle = '#b89a6a'; ctx.fillRect(cx - 36, fb - 6 - i * 5, 70, 4); ctx.fillStyle = 'rgba(0,0,0,.2)'; ctx.fillRect(cx - 36, fb - 2.6 - i * 5, 70, .8); }
+        lamp(cx - 40, fb - 62, s); break; }
+      case 'oil': {
+        wheel(cx, fb - 110, 13, go ? -t * 1.1 : .2);
+        ctx.fillStyle = '#7a7e82'; ctx.fillRect(cx - 2.5, fb - 104, 5, 48);
+        drip(cx + 31, fb - 26, fb - 14, go);
+        for (let i = 0; i < rdy + (go ? 1 : 0); i++) { const tx = cx + 26 + i * 13; ctx.fillStyle = i < rdy ? '#7a6a2a' : 'rgba(122,106,42,.45)'; ctx.fillRect(tx, fb - 14, 11, 14); ctx.fillStyle = '#c8c0a0'; ctx.fillRect(tx + 2, fb - 10, 7, 4); }
+        lamp(cx - 22, fb - 88, s); break; }
+      case 'lathe': { const l = cx - 55, chx = l + 38, chy = fb - 67, a = go ? t * 16 : 0;
+        ctx.fillStyle = '#c8ccd0'; ctx.fillRect(chx, chy - 3, 48, 6); if (go) { ctx.fillStyle = 'rgba(255,255,255,.5)'; ctx.fillRect(chx + ((t * 60) % 44), chy - 3, 3, 6); }
+        ctx.fillStyle = '#4a4f53'; ctx.beginPath(); ctx.arc(chx, chy, 10, 0, 7); ctx.fill(); ctx.fillStyle = '#9aa0a4'; for (let i = 0; i < 3; i++) { const b = a + i * 2.094; ctx.fillRect(chx + Math.cos(b) * 6 - 2, chy + Math.sin(b) * 6 - 2, 4, 4); }
+        if (go && Math.random() < .12) parts.push({ k: 'ember', x: l + 60, y: chy + 2, vx: rand(-60, 60), vy: -rand(20, 70), life: rand(.2, .4) });
+        for (let i = 0; i < rdy; i++) { const px = l + 26 + i * 16; ctx.fillStyle = '#8a9094'; ctx.beginPath(); for (let j = 0; j < 6; j++) { const b = j * Math.PI / 3; ctx.lineTo(px + Math.cos(b) * 5, fb - 15 + Math.sin(b) * 5); } ctx.closePath(); ctx.fill(); ctx.fillStyle = '#3a3e42'; ctx.beginPath(); ctx.arc(px, fb - 15, 2, 0, 7); ctx.fill(); }
+        lamp(l + 8, fb - 92, s); break; }
+      case 'can': {   // the galley pot: steam while it boils, sealed cans lined up at the end of the counter
+        if (go && Math.random() < .06) parts.push({ k: 'steam', x: cx + rand(-6, 6), y: fb - 92, vx: rand(-4, 4), vy: -rand(14, 26), life: 1.3, r: rand(2, 4) });
+        for (let i = 0; i < rdy * FAC.can.qty; i++) { const cx2 = car.x0 + 214 + (i % 2) * 10, cy = fb - 60 - Math.floor(i / 2) * 10; ctx.fillStyle = '#b5523a'; ctx.fillRect(cx2, cy - 9, 8, 9); ctx.fillStyle = '#c8ccd0'; ctx.fillRect(cx2, cy - 10, 8, 2); }
+        lamp(cx + 34, fb - 104, s); break; }
+      case 'med': {   // the lab rig: a blue burner flame, bubbles in the flask, little bottles of medicine
+        const sx = cx - 9;
+        if (go) { ctx.fillStyle = `rgba(110,170,255,${.6 + Math.sin(t * 15) * .2})`; ctx.beginPath(); ctx.ellipse(sx + 9, fb - 69, 3.4, 6, 0, 0, 7); ctx.fill(); ctx.fillStyle = 'rgba(200,230,255,.7)'; for (let i = 0; i < 3; i++) { const by = fb - 76 - ((t * 14 + i * 7) % 14); ctx.beginPath(); ctx.arc(sx + 6 + i * 3, by, 1.2, 0, 7); ctx.fill(); } }
+        for (let i = 0; i < rdy; i++) { const vx = sx + 102 + i * 8; ctx.fillStyle = 'rgba(200,140,60,.85)'; ctx.fillRect(vx, fb - 76, 5, 12); ctx.fillStyle = '#e8e0c8'; ctx.fillRect(vx, fb - 78, 5, 2); }
+        lamp(cx + 40, fb - 104, s); break; }
+      case 'fruit': {   // a grow lamp over the vines; fruit turning from green to red
+        const gx = cx, gy = CAR.ceil + 58;
+        ctx.fillStyle = '#3a3e42'; ctx.fillRect(gx - 50, gy, 100, 5);
+        if (go) { ctx.save(); ctx.globalCompositeOperation = 'lighter'; const lg = ctx.createLinearGradient(0, gy, 0, gy + 150); lg.addColorStop(0, 'rgba(255,150,220,.34)'); lg.addColorStop(1, 'rgba(255,170,220,0)'); ctx.fillStyle = lg; ctx.beginPath(); ctx.moveTo(gx - 48, gy + 5); ctx.lineTo(gx + 48, gy + 5); ctx.lineTo(gx + 80, gy + 150); ctx.lineTo(gx - 80, gy + 150); ctx.closePath(); ctx.fill(); ctx.restore(); ctx.fillStyle = 'rgba(255,200,235,.9)'; ctx.fillRect(gx - 46, gy + 4, 92, 2); }
+        if (go) for (const [ox, oy] of [[-22, 70], [18, 84]]) { ctx.strokeStyle = '#4a7a3a'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(gx + ox, gy + oy - 9); ctx.lineTo(gx + ox, gy + oy - 4); ctx.stroke(); ctx.fillStyle = `rgb(${Math.floor(110 + 110 * s.p)},${Math.floor(170 - 60 * s.p)},70)`; ctx.beginPath(); ctx.arc(gx + ox, gy + oy, 3 + 2.4 * s.p, 0, 7); ctx.fill(); }   // fruit ripening under the lamp
+        { const bx = gx + 34, n = Math.min(6, rdy * FAC.fruit.qty);   // the picking basket on the floor: ripe fruit waiting for her
+          ctx.fillStyle = '#9a7444'; ctx.beginPath(); ctx.moveTo(bx - 14, fb - 14); ctx.lineTo(bx + 14, fb - 14); ctx.lineTo(bx + 11, fb); ctx.lineTo(bx - 11, fb); ctx.closePath(); ctx.fill();
+          ctx.strokeStyle = 'rgba(60,40,20,.5)'; ctx.lineWidth = .8; for (const yy of [fb - 10, fb - 5]) { ctx.beginPath(); ctx.moveTo(bx - 13, yy); ctx.lineTo(bx + 13, yy); ctx.stroke(); }
+          for (let i = 0; i < n; i++) { ctx.fillStyle = i % 2 ? '#c8402e' : '#e0573a'; ctx.beginPath(); ctx.arc(bx - 8 + (i % 3) * 8, fb - 16 - Math.floor(i / 3) * 5, 4, 0, 7); ctx.fill(); ctx.fillStyle = 'rgba(255,255,255,.35)'; ctx.beginPath(); ctx.arc(bx - 9 + (i % 3) * 8, fb - 17.5 - Math.floor(i / 3) * 5, 1.1, 0, 7); ctx.fill(); } }
+        lamp(gx + 58, gy + 2, s); break; }
+    }
+  }
+}
+function bottle(x, y, fill) {   // a glass water bottle standing at (x, y), filled part-way
+  ctx.fillStyle = 'rgba(200,225,235,.35)'; ctx.fillRect(x - 3.5, y - 14, 7, 14); ctx.fillRect(x - 1.6, y - 18, 3.2, 4);
+  ctx.fillStyle = 'rgba(110,170,220,.8)'; ctx.fillRect(x - 3, y - 13.5 * fill, 6, 13.5 * fill);
+  ctx.fillStyle = '#3a78b5'; ctx.fillRect(x - 2, y - 19.5, 4, 2);
+}
 
 function drawPowerFade() {   // as the power bleeds away the cars go cold and dark
   const p = S.power === undefined ? 100 : S.power; if (p > 85) return;
@@ -8974,6 +9476,7 @@ function frame(now, manual) {
   drawLifeTraces();
   drawLabLive();
   drawUtilityLive();
+  drawFacLive();
   drawDeviceFX();
   drawDoors(dt);
   drawTailLamp();
@@ -8993,6 +9496,8 @@ function frame(now, manual) {
     { v: OBJ.fire.v, o: OBJ.fire, f: p => drawFire(p.x, p.y, p.s) },
     { v: OBJ.wood.v, o: OBJ.wood, f: p => drawWood(p.x, p.y, p.s) },
     { v: OBJ.seat.v, o: OBJ.seat, f: p => drawSeat(p.x, p.y, p.s) },
+    { v: STAND.table.v - .0005, o: STAND.table, f: p => drawGalleyChair(p.x, p.y, p.s) },
+    { v: STAND.table.v + .003, o: STAND.table, f: p => drawGalleyTable(p.x, p.y, p.s) },
     { v: OBJ.garden.v, o: OBJ.garden, f: p => deadPlants(() => drawGarden(p.x, p.y, p.s)) },
     { v: OBJ.garden.v, o: { u: U(2820), v: .08 }, f: p => deadPlants(() => drawGarden(p.x, p.y, p.s)) },
     { v: OBJ.garden.v, o: { u: U(3140), v: .08 }, f: p => deadPlants(() => drawGarden(p.x, p.y, p.s)) },
@@ -9150,7 +9655,41 @@ document.querySelectorAll('#spd button').forEach(b => b.onclick = () => {
 $('sfx').value = S.sfx;
 $('sfx').oninput = e => { S.sfx = +e.target.value; };
 
-function toggleSound() { if (!AC) initAudio(); else if (AC.state === 'running') AC.suspend(); else AC.resume(); setTimeout(radioLabel, 60); }
+function toggleSound() { let on; if (!AC) { initAudio(); on = true; } else if (AC.state === 'running') { AC.suspend(); on = false; } else { AC.resume(); on = true; } setMusic(on); setTimeout(radioLabel, 60); }   // one switch for the train and the song
+/* ---- background song: a small YouTube player in the corner, started with the game, following the sound button ---- */
+const BGM_ID = 'zCrS2qY7vtU', BGM_START = 206;
+// the player is made as soon as the page opens, so the start click itself can press play (browsers only allow sound from a click)
+let ytPlayer = null, ytWant = false, ytReady = false, ytBlocked = false;
+const YT_LINK = `https://www.youtube.com/watch?v=${BGM_ID}&t=${BGM_START}s`;
+function ytHint(html) { const h = $('ytHint'); if (h) { h.innerHTML = html; h.style.display = html ? '' : 'none'; } }
+function loadYT() {
+  if (ytPlayer || $('ytApi')) return;
+  window.onYouTubeIframeAPIReady = makeYT;
+  const s = document.createElement('script'); s.id = 'ytApi'; s.src = 'https://www.youtube.com/iframe_api'; s.onerror = ytFail; document.head.appendChild(s);
+  setTimeout(() => { if (!ytReady) ytFail(); }, 15000);
+}
+function ytFail() {   // this page can't reach YouTube (some embedded viewers block it): say so, and leave a link
+  if (ytReady) return; ytBlocked = true; $('ytWrap').classList.remove('on');
+  ytHint(`여기선 유튜브가 막혀 있어요 · <a href="${YT_LINK}" target="_blank" rel="noopener" style="color:var(--accent)">유튜브에서 듣기</a>`);
+}
+function makeYT() {
+  if (ytPlayer) return;
+  $('ytWrap').classList.add('on');
+  ytPlayer = new YT.Player('ytBgm', { width: 320, height: 180, videoId: BGM_ID,
+    playerVars: { start: BGM_START, loop: 1, playlist: BGM_ID, controls: 1, playsinline: 1, rel: 0 },
+    events: {
+      onReady: e => { ytReady = true; ytBlocked = false; $('ytWrap').classList.add('on'); e.target.setVolume(60); if (ytWant) ytPlay(); else ytHint('게임을 시작하면 재생돼요'); },
+      onStateChange: e => { if (e.data === 1) ytHint(''); },
+      onError: () => { ytHint(`이 영상은 여기서 재생이 안 돼요 · <a href="${YT_LINK}" target="_blank" rel="noopener" style="color:var(--accent)">유튜브에서 듣기</a>`); } } });
+}
+function ytPlay() {
+  if (!ytReady) return;
+  try { ytPlayer.unMute(); ytPlayer.setVolume(60); ytPlayer.playVideo(); } catch (e) {}
+  setTimeout(() => { if (ytWant && ytReady && ytPlayer.getPlayerState && ytPlayer.getPlayerState() !== 1) ytHint('음악이 안 나오면 위 화면의 ▶를 한 번 눌러 주세요'); }, 4000);
+}
+function startMusic() { ytWant = true; if (ytBlocked) return; if (ytReady) ytPlay(); else loadYT(); }
+function setMusic(on) { ytWant = on; if (on) startMusic(); else if (ytReady) ytPlayer.pauseVideo(); }
+function startSound() { startMusic(); if (!AC) initAudio(); else if (AC.state !== 'running') AC.resume(); setTimeout(radioLabel, 60); }   // entering the game turns the sound on (the click is the browser's permission)
 $('radioBtn').onclick = toggleSound; $('sndTog').onclick = toggleSound;
 addEventListener('keydown', e => { if ((e.key === 'm' || e.key === 'M') && !e.ctrlKey && !e.metaKey && !e.altKey && !/INPUT|TEXTAREA/.test(e.target.tagName)) toggleSound(); });
 function radioLabel() { const on = AC && AC.state === 'running'; $('radioState').textContent = on ? '🚂 기차 소리 재생 중' : '꺼짐'; $('radioBtn').textContent = on ? '소리 끄기' : '소리 켜기'; $('sndTog').textContent = on ? '🔊' : '🔇'; $('sndTog').classList.toggle('on', !!on); $('sndTog').title = on ? '소리 끄기 (M)' : '소리 켜기 (M)'; }
@@ -9177,8 +9716,8 @@ function begin(fresh) {
   running = true; lastTick = Date.now(); glowQuietUntil = t + 60; renderLog(); updateUI(); save();   // (a calm first minute: no glowing buttons unless something goes wrong)   // sound stays off until "소리 켜기"
 }
 if (hasSave) { $('startBtn').textContent = `이어하기 (D+${S.day})`; $('newBtn').classList.remove('hidden'); }
-$('startBtn').onclick = () => begin(!hasSave);
-$('newBtn').onclick = () => begin(true);
+$('startBtn').onclick = () => { startSound(); begin(!hasSave); };
+$('newBtn').onclick = () => { startSound(); begin(true); };
 $('againBtn').onclick = () => begin(true);
 $('watchBtn').onclick = () => { S.broken = true; $('over').classList.add('hidden'); $('watchBtn').classList.add('hidden'); running = true; woman.task = null; save(); };
 $('reset').onclick = () => { if (confirm('처음부터 다시 시작할까요? 지금까지의 기록이 사라져요.')) begin(true); };
@@ -9378,7 +9917,8 @@ if (location.search.includes('debug')) window.__g = { get S() { return S; }, wom
   get salvage() { return salvage; }, get ending() { return ending; }, get cur() { return cur; }, drone, TRAIN, get tunnel() { return tunnel; }, set tunnel(v) { tunnel = v; }, SPD, startEnding,
   startCrisis, startBreakdown, maintenanceTask, startWaterStop, get crisis() { return crisis; }, get waterStop() { return waterStop; }, oilTask, blowdownTask, mealTask, whistleTask, shovelTask, gaugeTask, couplerTask, lampTask, camR, stage, addScar, EVENTS, chalkTask, scribbleTask, sosTask, showTitle, cine, cineFor, radioCallTask, tallyTask, storyOptions, startHeli, startDistantLight, startPhotoLoss, startGullTheft, waveWash, get heli() { return heli; },
   herX, roofPos, OBJ, get drone() { return drone; }, startExtra, setReg, setBrk, sendKit, storeItem, startRunaway, carLifeOptions, driveTarget, tryRebirth, labMedTask, carTemps, get rebirth() { return rebirth; }, CARS, LOCO, TENDER, orderMod, modTask, benchTask, kitchenStockTask, mealPrepTask, addClue, applyMods, updateModsUI, heal, recoveryTick, museLine, arrangePanel, updatePanelSummaries, deliveryTask, relLevel, renderJournal, drawLifeTraces, get falling() { return falling; }, pianoTask, dozeTask, windowWipeTask, keepsakeTask, sketchTask, rainyJobTask, stormPrepTask, composeDiary, startOmen, omenTask, catchUp, takeDeferred, taskPri, launch, get crate() { return crate; }, parts, PENDING, startDebris, spawnPending, emergencyBrake, quickStart, lastGaspTask, diaryTask, repairDamageTask, interrupt, rebuildRoof, MOTION, get running() { return running; }, set running(v) { running = v; }, get t() { return t; }, crisisBanner, startOverspeed,
-  NEED, haveNeed, canMiracle, useMiracle, responseUI, crisisStarter, set battery(v) { S.battery = v; }, DEV, useDevice, carTemps, outfitHook, dressStep, heaterTask, showerTask, lightHeaterTask, equipmentTask, UTIL, UTIL_AT, startRoute, ROUTE, routeGlow, queueNotice, get notice() { return NOTICE; }, trainProblems, boilerWaterTask, glowTarget, setLightMode, herInDark, litK, lightsState, save, endRoute, updateUI,
+  NEED, haveNeed, canMiracle, useMiracle, responseUI, crisisStarter, set battery(v) { S.battery = v; }, DEV, useDevice, carTemps, outfitHook, dressStep, heaterTask, showerTask, lightHeaterTask, equipmentTask, UTIL, UTIL_AT, startRoute, ROUTE, routeGlow, queueNotice, get notice() { return NOTICE; }, trainProblems, boilerWaterTask, glowTarget, setLightMode, herInDark, litK, lightsState, save, endRoute, updateUI, LEISURE, suggestLeisure, cycleCarHeat, carHeatLv, camR,
+  FAC, facState, facTick, facToggle, facCollect, facCollectTask, facCatchUp, facWhy, focusOn,
   spriteSheet(list, sc) {   // debug: a contact sheet of her in given outfits/poses, as an image URL
     sc = sc || 2.4; const cw = 44 * sc, out = document.createElement('canvas'); out.width = list.length * cw; out.height = 104 * sc; const o = out.getContext('2d'); o.fillStyle = '#cfc6b4'; o.fillRect(0, 0, out.width, out.height);
     const sv = { outfit: S.outfit, anim: woman.anim, lt: woman.lt, dur: woman.dur, motion: woman.motion, facing: woman.facing };
@@ -9388,7 +9928,7 @@ if (location.search.includes('debug')) window.__g = { get S() { return S; }, wom
   },
   run(sec) { let n = Math.max(last, performance.now()); for (let i = 0; i < sec * 30; i++) { n += 1000 / 30; frame(n, true); } } };
 
-applyMods(); arrangePanel(); renderLog(); updateUI();
+applyMods(); arrangePanel(); renderLog(); updateUI(); loadYT();
 requestAnimationFrame(frame);
 })();
 </script>
